@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- Sets user-wide env vars -->
+<dict>
+    <key>Label</key>
+    <string>environment</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>sh</string>
+        <string>-c</string>
+        <string>
+        launchctl setenv LANG en_US.UTF-8
+        </string>
+    </array>
+</dict>
+</plist>
