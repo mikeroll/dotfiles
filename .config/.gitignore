@@ -1,0 +1,28 @@
+# Unwanted stuff
+.mono/
+StardewValley/
+
+zsh/.zplugin/*
+!zsh/.zplugin/plugins
+zsh/.zplugin/plugins/*
+!zsh/.zplugin/plugins/_local---*
+zsh/.zplugin/plugins/_local---zplugin
+
+zsh/.zcompdump
+zsh/.zhistory
+zsh/.zcompcache
+jupyter/profile_default/history.sqlite
+jupyter/profile_default/startup/README
+configstore/update-notifier-npm.json
+direnv/allow
+gnupg/
+asdf/tool-versions
+
+# Secrets
+aws/
+
+# Managed by ansible
+git/config*
+
+# vscode - managed separately
+Code - OSS

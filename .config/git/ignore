@@ -1,0 +1,5 @@
+.envrc
+.tool-versions
+
+# Python
+.venv

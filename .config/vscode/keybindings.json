@@ -1,0 +1,29 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+[Backquote]",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+[Backquote]",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "command": "notifications.toggleList",
+        "key": "ctrl+escape"
+    },
+    {
+        "command": "editor.action.deleteLines",
+        "key": "cmd+shift+backspace",
+    },
+    {
+        "command": "git.checkout",
+        "key": "cmd+shift+=",
+    }
+]

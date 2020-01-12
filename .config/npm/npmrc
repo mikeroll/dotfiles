@@ -1,0 +1,3 @@
+cache=~/.cache/npm
+prefix=~/.local/share/npm
+npm_config_devdir=~/.local/share/node-gyp

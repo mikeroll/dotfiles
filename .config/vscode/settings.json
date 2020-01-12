@@ -1,0 +1,150 @@
+{
+    //
+    // UI
+    //
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Verdandi",
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#695d6980",
+    },
+    "explorer.openEditors.visible": 10,
+    "workbench.editor.showTabs": true,
+    "workbench.settings.editor": "json",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "debug.toolBarLocation": "docked",
+    "breadcrumbs.enabled": true,
+    "window.titleBarStyle": "native",
+    "scm.defaultViewMode": "tree",
+    //
+    // Terminal
+    //
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "Iosevka",
+    //
+    // Editor
+    //
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "Iosevka",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 2500,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderIndentGuides": false,
+    "editor.renderWhitespace": "selection",
+    "editor.roundedSelection": false,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "openInBrowsers.browser": "Firefox Nightly",
+    //
+    // Git
+    //
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.format": "${author|16?} ${agoOrDate|14-}",
+    "gitlens.blame.heatmap.location": "left",
+    "gitlens.blame.separateLines": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    //
+    // Python
+    //
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.jediEnabled": false,
+    "python.venvPath": "~/code/.virtualenvs",
+    "python.terminal.activateEnvironment": false,
+    //
+    // JS
+    //
+    "javascript.format.enable": false,
+    "javascript.validate.enable": false,
+    //
+    // Rust
+    //
+    "rust-client.rustupPath": "/Users/mike/.local/share/cargo/bin/rustup",
+    //
+    // Go
+    //
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    //
+    // Syntax-specific
+    //
+    "files.exclude": {
+        // Python
+        "**/*.pyc": true,
+        "**/__pycache__": true,
+        ".idea": true,
+        ".mypy_cache": true,
+        ".pytest_cache": true,
+        ".tox": true,
+    },
+    "files.associations": {
+        "*.jenkinsfile": "groovy",
+        "Vagrantfile": "ruby",
+        "Pipfile": "toml"
+    },
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+        "editor.rulers": [
+            88
+        ]
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "[dockerfile]": {
+        "editor.formatOnSave": false,
+    },
+    "[terraform]": {
+        "editor.formatOnType": false,
+        "editor.codeLens": false
+    },
+    "shellcheck.ignorePatterns": {
+        "**/*.zsh": true,
+        "**/.zsh*": true,
+        "**/.zprofile": true,
+        "**/.envrc": true,
+    },
+    //
+    // Project Manager
+    //
+    "projectManager.git.baseFolders": [
+        "/Users/mike/dotfiles",
+        "/Users/mike/code",
+        "/Users/mike/work"
+    ],
+}
