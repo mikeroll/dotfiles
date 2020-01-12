@@ -1,0 +1,11 @@
+#!/usr/bin/zsh
+
+# Hotplug workspaces
+bspc subscribe monitor_add monitor_remove \
+| while read -r event id name geometry; do
+    if [[ "${event}" == 'monitor_add' ]]; then 
+        # Add new workspaces
+        bspc monitor "${name}" -d {1..7}
+    fi
+done
+

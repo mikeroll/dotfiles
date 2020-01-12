@@ -1,0 +1,14 @@
+#!/usr/bin/zsh
+bspc config top_padding                 30
+bspc config border_width                 0
+bspc config window_gap                   0
+
+bspc config split_ratio               0.52
+bspc config borderless_monocle        true
+bspc config gapless_monocle           true
+bspc config single_monocle            true
+bspc config focus_follows_pointer     true
+bspc config click_to_focus            true
+bspc config remove_disabled_monitors  true
+bspc config remove_unplugged_monitors true
+bspc monitor -d {1..7}

@@ -1,0 +1,19 @@
+#!/usr/bin/zsh
+
+# Disable accessibility bus
+export NO_AT_BRIDGE=1
+
+picom --experimental-backends &
+redshift &
+
+xset r rate 206 55
+xsetroot -cursor_name left_ptr
+
+export WALLPAPER=~/pictures/94.jpg.png
+feh --no-fehbg --bg-scale $WALLPAPER
+
+# xss-lock -- i3lock -i ${WALLPAPER} &
+# loginctl lock-session
+
+sxhkd -m -1 &
+polybar main &

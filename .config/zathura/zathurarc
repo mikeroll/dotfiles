@@ -1,0 +1,3 @@
+set font "Iosevka 12"
+set guioptions ""
+set scroll_wrap false

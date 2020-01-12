@@ -1,0 +1,42 @@
+#!/usr/bin/zsh
+
+typeset -a defaults=(
+     -fn "Iosevka Nerd Font:size=11" 
+     -i 
+     -h '32' -y '-2' -x '-3'
+     -class Dmenu
+     -nb '#1d1f21'
+     -sb '#282a2e'
+     -nf '#c5c8c6'
+)
+
+function launch() {
+  local opts=($defaults -w 860 -p "  " -sf '#f0c674' -q)
+
+  typeset -A executables=(${(kv)commands} ${(kv)functions} ${(kv)aliases})
+  local choice="$(echo ${(F)${(kuo)executables}} | dmenu $opts)"
+  [[ -z "$choice" ]] && exit 0
+  if ((+executables[$choice])); then
+      exec ${(z)executables[$choice]} &!
+  else
+      exec ${SHELL} -c "${choice}" &!
+  fi
+}
+
+function power() {
+  local opts=($defaults -w 1920 -p "  " -dim 0.42 -sf '#cc6666')
+
+  typeset -A actions=(
+      'Lock'     'loginctl lock-session'
+      'Suspend'  'systemctl suspend'
+      'Reboot'   'systemctl reboot'
+      'Poweroff' 'systemctl poweroff'
+  )
+  
+  # Better, but doesn't preserve order:
+  # menu=${(Fk)action}
+  menu="Lock\nSuspend\nReboot\nPoweroff"
+  ${(z)actions[$(echo $menu | dmenu $opts)]}
+}
+
+$1
