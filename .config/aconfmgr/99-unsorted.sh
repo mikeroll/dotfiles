@@ -53,6 +53,13 @@ AddPackage texinfo # GNU documentation system for on-line information and printe
 AddPackage which # A utility to show the full path of commands
 
 
+# Configure swap
+AddPackage systemd-swap # Script for creating hybrid swap space from zram swaps, swap files and swap partitions.
+CopyFile /etc/sysctl.d/10-vm.conf
+CopyFile /etc/systemd/swap.conf
+CreateLink /etc/systemd/system/local-fs.target.wants/systemd-swap.service /usr/lib/systemd/system/systemd-swap.service
+
+
 # Hardware
 AddPackage amd-ucode # Microcode update files for AMD CPUs
 
