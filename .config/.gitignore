@@ -24,3 +24,9 @@ docker/
 
 # vscode - managed separately
 Code - OSS
+
+# pulseaudio
+pulse/
+
+# dconf
+dconf/

@@ -70,6 +70,14 @@ AddPackage lm_sensors # Collection of user space tools for general SMBus access 
 CopyFile /etc/conf.d/lm_sensors
 CreateLink /etc/systemd/system/multi-user.target.wants/lm_sensors.service /usr/lib/systemd/system/lm_sensors.service
 
+# Sound
+AddPackage alsa-utils # An alternative implementation of Linux sound support
+AddPackage pulseaudio # A featureful, general-purpose sound server
+AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
+AddPackage pulsemixer # CLI and curses mixer for pulseaudio
+CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
+
+
 # Autologin
 CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
 CopyFile /etc/systemd/system/getty@tty1.service.d/override.conf
