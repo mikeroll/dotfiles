@@ -26,6 +26,9 @@ zplugin light _local/asdf
 export DIRENV_LOG_FORMAT=
 zplugin light _local/direnv
 
+zplugin light zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 zplugin light zdharma/fast-syntax-highlighting
 FAST_HIGHLIGHT_STYLES[variable]="none"
 zle_highlight+=(paste:none)
