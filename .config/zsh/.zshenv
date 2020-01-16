@@ -1,5 +1,7 @@
 source $ZDOTDIR/path.zsh
 
+export LANG=en_US.UTF-8
+
 # Setup temp dir
 export TMPDIR="/tmp/${USER}"
 if [[ ! -d "$TMPDIR" ]]; then
