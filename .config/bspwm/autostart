@@ -9,8 +9,8 @@ redshift &
 xset r rate 206 55
 xsetroot -cursor_name left_ptr
 
-export WALLPAPER=~/pictures/94.jpg.png
-feh --no-fehbg --bg-scale $WALLPAPER
+export WALLPAPER=~/pictures/michelle-spollen-c9MFM8rSMsQ-unsplash.jpg
+feh --no-fehbg --bg-fill $WALLPAPER
 
 # xss-lock -- i3lock -i ${WALLPAPER} &
 # loginctl lock-session

@@ -18,7 +18,6 @@ secondary = #e60053
 alert = #cc6666
 
 [bar/default]
-override-redirect = true
 wm-restack = bspwm
 width = 100%
 height = 30
