@@ -113,6 +113,7 @@ AddPackage --foreign ttf-iosevka # A slender monospace typeface. Shape
 AddPackage --foreign ttf-iosevka-term # A slender monospace typeface. Shape
 AddPackage --foreign nerd-fonts-iosevka # Patched Iosevka font from the nerd-fonts library
 AddPackage --foreign dmenu2 # Fork of dmenu with many useful patches applied and additional options like screen select, dim or opacity change
+AddPackage --foreign bibata-cursor-theme # Material Based Cursor Theme
 
 # Apps
 AddPackage chromium # A web browser built for speed, simplicity, and security
