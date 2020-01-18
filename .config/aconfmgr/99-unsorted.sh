@@ -22,6 +22,9 @@ CreateLink /etc/localtime /usr/share/zoneinfo/Europe/Minsk
 CopyFile /etc/hostname
 CopyFile /etc/hosts
 
+# NTP
+CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
+CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
 
 # Network
 CopyFile /etc/systemd/network/20-wired.network
