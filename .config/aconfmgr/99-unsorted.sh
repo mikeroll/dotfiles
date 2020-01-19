@@ -97,6 +97,7 @@ AddPackage openssh # Premier connectivity tool for remote login with the SSH pro
 AddPackage tree # A directory listing program displaying a depth indented list of files
 AddPackage shellcheck # Shell script analysis tool
 AddPackage unzip # For extracting and viewing files in .zip archives
+AddPackage --foreign direnv # a shell extension that manages your environment
 
 # Desktop
 AddPackage bspwm # Tiling window manager based on binary space partitioning
