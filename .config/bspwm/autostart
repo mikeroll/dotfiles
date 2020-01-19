@@ -13,6 +13,9 @@ setxkbmap -layout us,ru -option grp:caps_toggle
 # Cursor
 xsetroot -cursor_name left_ptr
 
+# Xresources
+xrdb -merge "${XDG_CONFIG_DIR}/X11/xresources"
+
 export WALLPAPER=~/pictures/michelle-spollen-c9MFM8rSMsQ-unsplash.jpg
 feh --no-fehbg --bg-fill $WALLPAPER
 

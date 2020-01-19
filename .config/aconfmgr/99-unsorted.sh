@@ -109,9 +109,6 @@ AddPackage xorg-xsetroot # Classic X utility to set your root window background 
 AddPackage redshift # Adjusts the color temperature of your screen according to your surroundings.
 AddPackage --foreign picom-git # X compositor (fork of compton) (git-version)
 AddPackage --foreign polybar # A fast and easy-to-use status bar
-AddPackage --foreign ttf-iosevka # A slender monospace typeface. Shape
-AddPackage --foreign ttf-iosevka-term # A slender monospace typeface. Shape
-AddPackage --foreign nerd-fonts-iosevka # Patched Iosevka font from the nerd-fonts library
 AddPackage --foreign dmenu2 # Fork of dmenu with many useful patches applied and additional options like screen select, dim or opacity change
 AddPackage --foreign bibata-cursor-theme # Material Based Cursor Theme
 
@@ -121,3 +118,33 @@ AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
 AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage kitty # A simple VTE-based terminal
 AddPackage xclip # Command line interface to the X11 clipboard
+
+
+# Fonts
+AddPackage --foreign cairo-infinality-remix # Cairo vector graphics library with Infinality patch support
+AddPackage --foreign fontconfig-infinality-remix # A library for configuring and customizing font access, optimized for Infinality Remix.
+AddPackage --foreign freetype2-infinality-remix # TrueType font rendering library with Infinality Remix patches
+
+AddPackage noto-fonts # Google Noto TTF fonts
+AddPackage otf-overpass # An open source font family inspired by Highway Gothic esp. suited for signs, lettering and web sites
+AddPackage tex-gyre-fonts # Substitute PostScript fonts in OpenType format
+AddPackage ttf-caladea # Google's Caladea font
+AddPackage ttf-carlito # Google's Carlito font
+AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+AddPackage ttf-liberation # Red Hats Liberation fonts
+AddPackage ttf-roboto # Google's signature family of fonts
+AddPackage --foreign ttf-iosevka # A slender monospace typeface. Shape
+AddPackage --foreign ttf-iosevka-term # A slender monospace typeface. Shape
+AddPackage --foreign nerd-fonts-iosevka # Patched Iosevka font from the nerd-fonts library
+AddPackage --foreign ttf-courier-prime # Monospace Courier font alternative optimized for screenplays
+AddPackage --foreign ttf-gelasio-ib # Gelasio is designed to be metrics compatible with Georgia in its Regular, Bold, Italic and Bold Italic weights. Interpolated Medium, medium Italic, SemiBold and SemiBold Italic have now been added as well.
+AddPackage --foreign ttf-merriweather # A typeface that is pleasant to read on screens by Sorkin Type Co
+AddPackage --foreign ttf-signika # Sans-serif typeface from Google by Anna Giedryś
+AddPackage --foreign ttf-source-sans-pro-ibx # A set of OpenType fonts designed for user interfaces. TrueType version.
+
+CreateLink /etc/fonts/conf.d/30-metric-aliases-combi.conf /etc/fonts/conf.avail.infinality/combi/30-metric-aliases-combi.conf
+CreateLink /etc/fonts/conf.d/37-repl-global-combi.conf /etc/fonts/conf.avail.infinality/combi/37-repl-global-combi.conf
+CreateLink /etc/fonts/conf.d/60-latin-combi.conf /etc/fonts/conf.avail.infinality/combi/60-latin-combi.conf
+CreateLink /etc/fonts/conf.d/65-non-latin-combi.conf /etc/fonts/conf.avail.infinality/combi/65-non-latin-combi.conf
+CreateLink /etc/fonts/conf.d/66-aliases-wine-combi.conf /etc/fonts/conf.avail.infinality/combi/66-aliases-wine-combi.conf
+SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
