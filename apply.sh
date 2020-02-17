@@ -54,8 +54,10 @@ mkdir -p ~/Library/LaunchAgents/
 cp -f "${thisdir}"/launchagents/*.plist ~/Library/LaunchAgents/
 
 # Configure shell
-sudo chsh -s /usr/local/bin/zsh mike
-echo 'ZDOTDIR="$HOME/.config/zsh"' | sudo tee /etc/zshenv
+[ "$SHELL" = /usr/local/bin/zsh ] || sudo chsh -s /usr/local/bin/zsh mike
+
+# shellcheck disable=SC2016
+echo 'ZDOTDIR="$HOME/.config/zsh"' | sudo tee /etc/zshenv >/dev/null
 touch ~/.hushlogin
 
 # Link .config
