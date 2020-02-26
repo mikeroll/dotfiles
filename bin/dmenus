@@ -16,7 +16,7 @@ function launch() {
   typeset -A executables=(${(kv)commands} ${(kv)functions} ${(kv)aliases})
   local choice="$(echo ${(F)${(kuo)executables}} | dmenu $opts)"
   [[ -z "$choice" ]] && exit 0
-  if ((+executables[$choice])); then
+  if (( $+executables[$choice] )); then
       exec ${(z)executables[$choice]} &!
   else
       exec ${SHELL} -c "${choice}" &!

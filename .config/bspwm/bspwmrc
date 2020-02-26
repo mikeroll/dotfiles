@@ -5,7 +5,6 @@ bspc config borderless_monocle        true
 bspc config gapless_monocle           true
 bspc config single_monocle            false
 bspc config focus_follows_pointer     true
-bspc config click_to_focus            true
 bspc config remove_disabled_monitors  true
 bspc config remove_unplugged_monitors true
 bspc monitor -d {1..10}
