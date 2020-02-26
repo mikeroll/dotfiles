@@ -196,11 +196,7 @@ unsetopt CLOBBER           # Do not overwrite existing files with > and >>.
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
-# Custom completion functions
-source $ZDOTDIR/completions.zsh
-compdef -d django-admin  # disable builtin completion
-compctl -K _completions.pip pip{,2,3}
-compctl -K _completions.django django-admin
+zinit cdreplay -q
 
 
 setopt completeinword    # Complete from both ends of a word.
@@ -252,15 +248,6 @@ zstyle ':completion:*:rm:*' file-patterns '*:all-files'
 
 # }}}
 
-#
-# Prompt & status
-#
-# {{{
-case $TERM in
-  xterm*)
-    precmd() { print -Pn "\e]0;%~\a" }
-    ;;
-esac
 
 # Trigger chpwd_functions manually 
 cd $PWD
