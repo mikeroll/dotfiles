@@ -98,6 +98,7 @@ AddPackage tree # A directory listing program displaying a depth indented list o
 AddPackage shellcheck # Shell script analysis tool
 AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage --foreign direnv # a shell extension that manages your environment
+AddPackage --foreign asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 
 # Desktop
 AddPackage bspwm # Tiling window manager based on binary space partitioning
