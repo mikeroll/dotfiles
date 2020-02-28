@@ -1,6 +1,10 @@
 # Unwanted stuff
 .mono/
 StardewValley/
+Electron/
+transmission/
+vlc/
+QtProject.conf
 
 zsh/.zplugin/*
 !zsh/.zplugin/plugins
