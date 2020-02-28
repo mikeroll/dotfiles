@@ -123,6 +123,9 @@ AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
 AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage kitty # A simple VTE-based terminal
 AddPackage xclip # Command line interface to the X11 clipboard
+AddPackage telegram-desktop # Official Telegram Desktop client
+AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
+AddPackage --foreign transmission-sequential-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI) (+sequential patch)
 
 
 # Fonts
