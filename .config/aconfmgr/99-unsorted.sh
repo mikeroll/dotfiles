@@ -68,6 +68,9 @@ AddPackage amd-ucode # Microcode update files for AMD CPUs
 
 AddPackage nvidia # NVIDIA drivers for linux
 CopyFile /etc/X11/xorg.conf.d/10-nvidia.conf
+CopyFile /etc/modprobe.d/10-nvidia-drm.conf
+CopyFile /etc/pacman.d/hooks/nvidia.hook
+CopyFile /etc/mkinitcpio.conf
 
 AddPackage lm_sensors # Collection of user space tools for general SMBus access and hardware monitoring
 CopyFile /etc/conf.d/lm_sensors
