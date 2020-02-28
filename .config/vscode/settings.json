@@ -3,7 +3,8 @@
     // UI
     //
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Verdandi",
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#695d6980",
     },
@@ -22,8 +23,9 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.linuxExec": "termite",
     "terminal.explorerKind": "external",
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "Iosevka",
     //
     // Editor
@@ -33,7 +35,8 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "Iosevka",
     "editor.fontLigatures": true,
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 2500,
@@ -80,6 +83,7 @@
     // Python
     //
     "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
     "python.linting.lintOnSave": true,
     "python.jediEnabled": false,
     "python.venvPath": "~/code/.virtualenvs",
@@ -143,8 +147,8 @@
     // Project Manager
     //
     "projectManager.git.baseFolders": [
-        "/Users/mike/dotfiles",
-        "/Users/mike/code",
-        "/Users/mike/work"
-    ],
+        "$home/dotfiles",
+        "$home/code",
+        "$home/work"
+    ]
 }
