@@ -1,6 +1,7 @@
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 
 # base
+CopyFile /etc/pacman.d/mirrorlist
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackage efibootmgr # Tool to modify UEFI Firmware Boot Manager Variables
 AddPackage linux # The Linux kernel and modules
