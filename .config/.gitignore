@@ -6,7 +6,7 @@ zsh/.zplugin/*
 !zsh/.zplugin/plugins
 zsh/.zplugin/plugins/*
 !zsh/.zplugin/plugins/_local---*
-zsh/.zplugin/plugins/_local---zplugin
+zsh/.zplugin/plugins/_local---zinit
 
 zsh/.zcompdump
 zsh/.zhistory

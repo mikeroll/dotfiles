@@ -11,32 +11,32 @@ source $ZDOTDIR/path.zsh
 # }}}
 
 #
-# ZPlugins
+# zinit plugins
 #
 # {{{
-if [[ ! -f $HOME/.local/share/zplugin/zplugin.zsh ]]; then
-  git clone https://github.com/zdharma/zplugin.git $HOME/.local/share/zplugin
+if [[ ! -f $HOME/.local/share/zinit/zinit.zsh ]]; then
+  git clone https://github.com/zdharma/zinit.git $HOME/.local/share/zinit
 fi
 
-zcompile $HOME/.local/share/zplugin/zplugin.zsh
-source $HOME/.local/share/zplugin/zplugin.zsh
+zcompile $HOME/.local/share/zinit/zinit.zsh
+source $HOME/.local/share/zinit/zinit.zsh
 
-zplugin light _local/asdf
+zinit light _local/asdf
 
 export DIRENV_LOG_FORMAT=
-zplugin light _local/direnv
+zinit light _local/direnv
 
-zplugin light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-zplugin light zdharma/fast-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
 FAST_HIGHLIGHT_STYLES[variable]="none"
 zle_highlight+=(paste:none)
 
-zplugin light hlissner/zsh-autopair
+zinit light hlissner/zsh-autopair
 
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
 # }}}
 
 #
