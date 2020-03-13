@@ -7,6 +7,7 @@ function envfile() {
 
 function maybe_activate_venv() {
     [[ -d .venv ]] && . .venv/bin/activate
+    unset PS1
 }
 
 maybe_activate_venv
