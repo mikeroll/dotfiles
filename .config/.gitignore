@@ -21,8 +21,5 @@ asdf/tool-versions
 # Secrets
 aws/
 
-# Managed by ansible
-git/config*
-
 # vscode - managed separately
 Code - OSS
