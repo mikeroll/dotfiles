@@ -20,6 +20,7 @@ asdf/tool-versions
 
 # Secrets
 aws/
+docker/
 
 # vscode - managed separately
 Code - OSS
