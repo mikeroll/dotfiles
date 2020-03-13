@@ -11,12 +11,14 @@
     "explorer.openEditors.visible": 10,
     "workbench.editor.showTabs": true,
     "workbench.settings.editor": "json",
+    "editor.smoothScrolling": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "debug.toolBarLocation": "docked",
     "breadcrumbs.enabled": true,
     "window.titleBarStyle": "native",
     "scm.defaultViewMode": "tree",
+    "search.useGlobalIgnoreFiles": true,
     //
     // Terminal
     //
@@ -88,6 +90,10 @@
     "python.jediEnabled": false,
     "python.venvPath": "~/code/.virtualenvs",
     "python.terminal.activateEnvironment": false,
+    "python.sortImports.args": [
+        "--settings-path",
+        "${workspaceFolder}"
+    ],
     //
     // JS
     //
