@@ -5,7 +5,7 @@ thisdir="$(readlink -f "$(dirname "$0")")"
 # Enable sudo via Touch ID
 pam_tid="auth       sufficient     pam_tid.so"
 if ! grep -q "${pam_tid}" /etc/pam.d/sudo; then
-    /usr/bin/sed -i '' -e '/^auth       sufficient     pam_smartcard.so$/i\
+    sudo /usr/bin/sed -i '' -e '/^auth       sufficient     pam_smartcard.so$/i\
     '"${pam_tid}"'' /etc/pam.d/sudo
 fi
 
