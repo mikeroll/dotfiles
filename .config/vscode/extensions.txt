@@ -10,6 +10,7 @@ DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
 fabiospampinato.vscode-open-in-browsers
+GitHub.github-vscode-theme
 JakeBecker.elixir-ls
 mauve.terraform
 ms-azuretools.vscode-docker
@@ -19,7 +20,7 @@ ms-vscode.Go
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-typescript-tslint-plugin
 pgourlain.erlang
+pureux.grueling-hare
 redhat.vscode-yaml
 Rubymaniac.vscode-direnv
-teabyii.ayu
 timonwong.shellcheck

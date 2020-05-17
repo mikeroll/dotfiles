@@ -4,9 +4,28 @@
     //
     "window.zoomLevel": 0,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.colorTheme": "GitHub Light",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#695d6980",
+        "terminal.foreground": "#464646",
+        "terminalCursor.background": "#464646",
+        "terminalCursor.foreground": "#464646",
+        "terminal.ansiBlack": "#F7F7F7",
+        "terminal.ansiBlue": "#686868",
+        "terminal.ansiBrightBlack": "#ABABAB",
+        "terminal.ansiBrightBlue": "#686868",
+        "terminal.ansiBrightCyan": "#868686",
+        "terminal.ansiBrightGreen": "#8E8E8E",
+        "terminal.ansiBrightMagenta": "#747474",
+        "terminal.ansiBrightRed": "#7C7C7C",
+        "terminal.ansiBrightWhite": "#101010",
+        "terminal.ansiBrightYellow": "#A0A0A0",
+        "terminal.ansiCyan": "#868686",
+        "terminal.ansiGreen": "#8E8E8E",
+        "terminal.ansiMagenta": "#747474",
+        "terminal.ansiRed": "#7C7C7C",
+        "terminal.ansiWhite": "#464646",
+        "terminal.ansiYellow": "#A0A0A0"
     },
     "explorer.openEditors.visible": 10,
     "workbench.editor.showTabs": true,
@@ -29,6 +48,8 @@
     "terminal.explorerKind": "external",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "Iosevka",
+    "debug.console.fontFamily": "Iosevka",
+    "debug.console.fontSize": 14,
     //
     // Editor
     //
