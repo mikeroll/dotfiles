@@ -60,11 +60,6 @@ CopyFile /etc/sysctl.d/10-vm.conf
 
 # Hardware
 AddPackage amd-ucode # Microcode update files for AMD CPUs
-
-AddPackage nvidia # NVIDIA drivers for linux
-CopyFile /etc/X11/xorg.conf.d/10-nvidia.conf
-CopyFile /etc/modprobe.d/10-nvidia-drm.conf
-CopyFile /etc/pacman.d/hooks/nvidia.hook
 CopyFile /etc/mkinitcpio.conf
 
 AddPackage lm_sensors # Collection of user space tools for general SMBus access and hardware monitoring
@@ -98,11 +93,16 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage --foreign direnv # a shell extension that manages your environment
 AddPackage --foreign asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 
+# Graphics
+AddPackage xf86-video-amdgpu # X.org amdgpu video driver
+CopyFile /etc/X11/xorg.conf.d/20-amdgpu.conf
+AddPackage vulkan-radeon # Radeon's Vulkan mesa driver
+AddPackage xorg-xrandr # Primitive command line interface to RandR extension
+
 # Desktop
 AddPackage bspwm # Tiling window manager based on binary space partitioning
 AddPackage sxhkd # Simple X hotkey daemon
 AddPackage feh # Fast and light imlib2-based image viewer
-AddPackage xorg-server-xephyr # A nested X server that runs as an X application
 AddPackage xorg-xinit # X.Org initialisation program
 AddPackage xorg-xset # User preference utility for X
 AddPackage xorg-xsetroot # Classic X utility to set your root window background to a given pattern or color
