@@ -23,6 +23,10 @@ IgnorePath '/usr/lib/*'
 IgnorePath '/usr/share/*'
 IgnorePath '/var/*'
 
+# TODO: Encrypt wifi passwords
+# TODO: Store passwords per-user
+IgnorePath '/etc/NetworkManager/system-connections/*'
+
 # These are created before aconfmgr gets a chance to run, so let's just skip them
 IgnorePath '/etc/sudoers.d/mike'
 IgnorePath '/etc/zsh/zshenv'
