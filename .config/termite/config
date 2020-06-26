@@ -14,11 +14,11 @@ cursor_shape = block
 size_hints = false
 filter_unmatched_urls = true
 
-font = Iosevka Term 12
+font = Iosevka Term 10
 
 
 [hints]
-font = Iosevka Term 12
+font = Iosevka Term 10
 
 
 [colors]
