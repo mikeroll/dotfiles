@@ -66,6 +66,10 @@ AddPackage lm_sensors # Collection of user space tools for general SMBus access 
 CopyFile /etc/conf.d/lm_sensors
 CreateLink /etc/systemd/system/multi-user.target.wants/lm_sensors.service /usr/lib/systemd/system/lm_sensors.service
 
+AddPackage linux-headers # Headers and scripts for building modules for the Linux kernel
+AddPackage --foreign rtl88x2bu-dkms-git # Kernel module for Realtek rtl88x2bu WiFi chipset
+
+
 # Sound
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage pulseaudio # A featureful, general-purpose sound server
