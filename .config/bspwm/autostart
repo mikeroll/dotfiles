@@ -22,6 +22,8 @@ feh --no-fehbg --bg-fill $WALLPAPER
 # xss-lock -- i3lock -i ${WALLPAPER} &
 # loginctl lock-session
 
+lxpolkit &
+
 sxhkd -m -1 &
 polybar main &
 nm-applet &

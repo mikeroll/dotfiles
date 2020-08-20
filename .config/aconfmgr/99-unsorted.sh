@@ -148,6 +148,7 @@ SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
 #
 AddPackage bspwm # Tiling window manager based on binary space partitioning
 AddPackage sxhkd # Simple X hotkey daemon
+AddPackage lxsession # Lightweight X11 session manager
 AddPackage feh # Fast and light imlib2-based image viewer
 AddPackage xorg-xinit # X.Org initialisation program
 AddPackage xorg-xrandr # Primitive command line interface to RandR extension
