@@ -9,11 +9,11 @@
 
 [colors]
 ; background = #1d1f21
-background = #f0f0f0
+background = #f3f3f3
 background-alt = #545C6A
 ; foreground = #c5c8c6
 foreground = #373b42
-foreground-alt = #f0f0f0
+foreground-alt = #f3f3f3
 accent = #373b42
 alert = #cc6666
 

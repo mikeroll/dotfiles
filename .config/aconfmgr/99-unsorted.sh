@@ -1,3 +1,4 @@
+AddPackage --foreign yay-bin # Yet another yogurt. Pacman wrapper and AUR helper written in go. Pre-compiled.
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 
 # base
@@ -54,6 +55,10 @@ AddPackage termite # A simple VTE-based terminal
 AddPackage texinfo # GNU documentation system for on-line information and printed output
 AddPackage which # A utility to show the full path of commands
 
+#
+# System tools
+#
+AddPackage pacman-contrib # Contributed scripts and tools for pacman systems
 
 # Configure swap
 CopyFile /etc/sysctl.d/10-vm.conf
@@ -70,22 +75,15 @@ AddPackage linux-headers # Headers and scripts for building modules for the Linu
 AddPackage --foreign rtl88x2bu-dkms-git # Kernel module for Realtek rtl88x2bu WiFi chipset
 
 
-# Sound
-AddPackage alsa-utils # An alternative implementation of Linux sound support
-AddPackage pulseaudio # A featureful, general-purpose sound server
-AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
-AddPackage pulsemixer # CLI and curses mixer for pulseaudio
-CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
-
 
 # Autologin
 CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
 CopyFile /etc/systemd/system/getty@tty1.service.d/override.conf
 
 
-# Tools
-AddPackage --foreign yay-bin # Yet another yogurt. Pacman wrapper and AUR helper written in go. Pre-compiled.
-
+#
+# Dev tools
+#
 AddPackage git # the fast distributed version control system
 AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
 AddPackage htop # Interactive process viewer
@@ -97,37 +95,26 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage --foreign direnv # a shell extension that manages your environment
 AddPackage --foreign asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 
+#
 # Graphics
+#
 AddPackage xf86-video-amdgpu # X.org amdgpu video driver
 CopyFile /etc/X11/xorg.conf.d/20-amdgpu.conf
 AddPackage vulkan-radeon # Radeon's Vulkan mesa driver
-AddPackage xorg-xrandr # Primitive command line interface to RandR extension
 
-# Desktop
-AddPackage bspwm # Tiling window manager based on binary space partitioning
-AddPackage sxhkd # Simple X hotkey daemon
-AddPackage feh # Fast and light imlib2-based image viewer
-AddPackage xorg-xinit # X.Org initialisation program
-AddPackage xorg-xset # User preference utility for X
-AddPackage xorg-xsetroot # Classic X utility to set your root window background to a given pattern or color
-AddPackage redshift # Adjusts the color temperature of your screen according to your surroundings.
-AddPackage --foreign picom-git # X compositor (fork of compton) (git-version)
-AddPackage --foreign polybar # A fast and easy-to-use status bar
-AddPackage --foreign dmenu2 # Fork of dmenu with many useful patches applied and additional options like screen select, dim or opacity change
-AddPackage --foreign bibata-cursor-theme # Material Based Cursor Theme
-
-# Apps
-AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
-AddPackage firefox # Standalone web browser from mozilla.org
-AddPackage kitty # A simple VTE-based terminal
-AddPackage xclip # Command line interface to the X11 clipboard
-AddPackage telegram-desktop # Official Telegram Desktop client
-AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
-AddPackage --foreign transmission-sequential-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI) (+sequential patch)
+#
+# Sound
+#
+AddPackage alsa-utils # An alternative implementation of Linux sound support
+AddPackage pulseaudio # A featureful, general-purpose sound server
+AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
+AddPackage pulsemixer # CLI and curses mixer for pulseaudio
+CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
 
 
+#
 # Fonts
+#
 AddPackage --foreign cairo-infinality-remix # Cairo vector graphics library with Infinality patch support
 AddPackage --foreign fontconfig-infinality-remix # A library for configuring and customizing font access, optimized for Infinality Remix.
 AddPackage --foreign freetype2-infinality-remix # TrueType font rendering library with Infinality Remix patches
@@ -155,3 +142,33 @@ CreateLink /etc/fonts/conf.d/60-latin-combi.conf /etc/fonts/conf.avail.infinalit
 CreateLink /etc/fonts/conf.d/65-non-latin-combi.conf /etc/fonts/conf.avail.infinality/combi/65-non-latin-combi.conf
 CreateLink /etc/fonts/conf.d/66-aliases-wine-combi.conf /etc/fonts/conf.avail.infinality/combi/66-aliases-wine-combi.conf
 SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
+
+#
+# Desktop
+#
+AddPackage bspwm # Tiling window manager based on binary space partitioning
+AddPackage sxhkd # Simple X hotkey daemon
+AddPackage feh # Fast and light imlib2-based image viewer
+AddPackage xorg-xinit # X.Org initialisation program
+AddPackage xorg-xrandr # Primitive command line interface to RandR extension
+AddPackage xorg-xset # User preference utility for X
+AddPackage xorg-xsetroot # Classic X utility to set your root window background to a given pattern or color
+AddPackage --foreign colorpicker # Click on a pixel on your screen and print its color value in RGB. Written for X11.
+AddPackage redshift # Adjusts the color temperature of your screen according to your surroundings.
+AddPackage capitaine-cursors # An x-cursor theme inspired by macOS and based on KDE Breeze
+AddPackage --foreign picom-git # X compositor (fork of compton) (git-version)
+AddPackage --foreign polybar # A fast and easy-to-use status bar
+AddPackage --foreign dmenu2 # Fork of dmenu with many useful patches applied and additional options like screen select, dim or opacity change
+AddPackage rofi # A window switcher, application launcher and dmenu replacement
+
+#
+# Apps
+#
+AddPackage chromium # A web browser built for speed, simplicity, and security
+AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
+AddPackage firefox # Standalone web browser from mozilla.org
+AddPackage kitty # A simple VTE-based terminal
+AddPackage xclip # Command line interface to the X11 clipboard
+AddPackage telegram-desktop # Official Telegram Desktop client
+AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
+AddPackage --foreign transmission-sequential-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI) (+sequential patch)

@@ -6,10 +6,6 @@
 super + Return
 	termite
 
-# dropdown terminal
-super + z
-	scratch toggle
-
 # program launcher
 super + space
 	dmenus launch
@@ -26,19 +22,7 @@ super + F1
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# Fn keys
-XF86Launch1
-    true
-
-XF86MonBrightnessDown
-    sudo -E sammy backlight -5
-
-XF86MonBrightnessUp
-    sudo -E sammy backlight +5
-
-XF86Display 
-    true
-
+# Volume keys
 XF86AudioMute
     pamixer -t
 
@@ -47,19 +31,6 @@ XF86AudioLowerVolume
  
 XF86AudioRaiseVolume
     pamixer -i 5
-
-XF86KbdBrightnessDown
-    sudo -E sammy keyboard_leds -1
-
-XF86KbdBrightnessUp
-    sudo -E sammy keyboard_leds +1
-
-XF86Launch3
-    sudo -E sammy perf_level toggle
-
-XF86WLAN
-    sudo -E sammy wlan toggle ;\
-    sudo -E sammy bluetooth toggle
 
 
 #
