@@ -51,7 +51,6 @@ AddPackage make # GNU make utility to maintain groups of programs
 AddPackage man-db # A utility for reading man pages
 AddPackage patch # A utility to apply patch files to original sources
 AddPackage pkgconf # Package compiler and linker metadata toolkit
-AddPackage termite # A simple VTE-based terminal
 AddPackage texinfo # GNU documentation system for on-line information and printed output
 AddPackage which # A utility to show the full path of commands
 
@@ -71,8 +70,9 @@ AddPackage lm_sensors # Collection of user space tools for general SMBus access 
 CopyFile /etc/conf.d/lm_sensors
 CreateLink /etc/systemd/system/multi-user.target.wants/lm_sensors.service /usr/lib/systemd/system/lm_sensors.service
 
-AddPackage linux-headers # Headers and scripts for building modules for the Linux kernel
-AddPackage --foreign rtl88x2bu-dkms-git # Kernel module for Realtek rtl88x2bu WiFi chipset
+# It's kinda flaky
+# AddPackage linux-headers # Headers and scripts for building modules for the Linux kernel
+# AddPackage --foreign rtl88x2bu-dkms-git # Kernel module for Realtek rtl88x2bu WiFi chipset
 
 
 
@@ -146,6 +146,7 @@ SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
 #
 # Desktop
 #
+AddPackage termite # A simple VTE-based terminal
 AddPackage bspwm # Tiling window manager based on binary space partitioning
 AddPackage sxhkd # Simple X hotkey daemon
 AddPackage lxsession # Lightweight X11 session manager
