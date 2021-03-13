@@ -75,3 +75,9 @@ export PSQL_HISTORY="${XDG_CACHE_HOME}/postgresql/psql_history"
 
 # fucking go
 export GOPATH="${HOME}/code/go"
+
+# wget
+export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc"
+
+# Haskell
+export STACK_ROOT="$XDG_DATA_HOME"/stack
