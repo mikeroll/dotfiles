@@ -77,10 +77,13 @@ CreateLink /etc/systemd/system/multi-user.target.wants/lm_sensors.service /usr/l
 # AddPackage --foreign rtl88x2bu-dkms-git # Kernel module for Realtek rtl88x2bu WiFi chipset
 
 
-
-# Autologin
-CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
-CopyFile /etc/systemd/system/getty@tty1.service.d/override.conf
+#
+# Login manager
+#
+AddPackage --foreign greetd # Generic greeter daemon
+AddPackage --foreign greetd-tuigreet # A console UI greeter for greetd
+CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/greetd.service
+CopyFile /etc/greetd/config.toml
 
 
 #
