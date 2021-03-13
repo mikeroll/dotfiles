@@ -1,5 +1,14 @@
 #!/bin/sh
+
 logdir="${XDG_DATA_HOME:-$HOME/.local/share}/xorg"
 logfile="${logdir}/Xorg.startup.log"
-[[ -d "${logdir}" ]] || mkdir -p "${logdir}"
-exec /usr/bin/X -keeptty -nolisten tcp "$@" vt$XDG_VTNR >"${logfile}" 2>&1
+[ -d "${logdir}" ] || mkdir -p "${logdir}"
+
+exec /usr/bin/X \
+    -keeptty \
+    -nolisten tcp \
+    -ardelay 210 \
+    -arinterval 16 \
+    "$@" \
+    "vt${XDG_VTNR}" >"${logfile}" \
+    2>&1

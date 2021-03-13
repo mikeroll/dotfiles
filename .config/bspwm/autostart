@@ -6,10 +6,6 @@ export NO_AT_BRIDGE=1
 picom --experimental-backends &
 redshift &
 
-# Keyboard
-xset r rate 206 55
-setxkbmap -layout us,ru -option grp:caps_toggle
-
 # Cursor
 xsetroot -cursor_name left_ptr
 

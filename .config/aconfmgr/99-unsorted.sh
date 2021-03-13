@@ -150,6 +150,12 @@ CreateLink /etc/fonts/conf.d/65-non-latin-combi.conf /etc/fonts/conf.avail.infin
 CreateLink /etc/fonts/conf.d/66-aliases-wine-combi.conf /etc/fonts/conf.avail.infinality/combi/66-aliases-wine-combi.conf
 SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
 
+
+#
+# Keyboard
+#
+CopyFile /etc/X11/xorg.conf.d/00-keyboard.conf
+
 #
 # Desktop
 #
