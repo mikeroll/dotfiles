@@ -155,6 +155,8 @@ SetFileProperty /etc/fonts/conf.d/35-repl-custom.conf deleted y
 # Keyboard
 #
 CopyFile /etc/X11/xorg.conf.d/00-keyboard.conf
+AddPackage qmk # CLI tool for customizing supported mechanical keyboards.
+AddPackage avr-libc # The C runtime library for the AVR family of microcontrollers
 
 #
 # Desktop
