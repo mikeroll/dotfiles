@@ -35,7 +35,7 @@ zle_highlight+=(paste:none)
 
 zinit light hlissner/zsh-autopair
 
-zinit ice pick"async.zsh" src"pure.zsh"
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 # }}}
 
@@ -210,6 +210,7 @@ setopt extendedglob      # Needed for file modification glob modifiers with comp
 # Caching
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
+zstyle ':completion:*' rehash true
 
 # Grouping
 zstyle ':completion:*'              menu             select
