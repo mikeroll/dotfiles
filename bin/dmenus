@@ -3,15 +3,16 @@
 typeset -a defaults=(
      -fn "Iosevka Nerd Font:size=11" 
      -i 
-     -h '32' -y '-2' -x '-3'
+     -h '32' -y '-2' -x '-8'
      -class Dmenu
-     -nb '#1d1f21'
-     -sb '#282a2e'
-     -nf '#c5c8c6'
+     -nb '#f3f3f3'
+     -sb '#545c6a'
+     -nf '#373b42'
+     -sf '#f3f3f3'
 )
 
 function launch() {
-  local opts=($defaults -w 860 -p "  " -sf '#f0c674' -q)
+  local opts=($defaults -w 860 -p "  " -q -dim 0.42)
 
   typeset -A executables=(${(kv)commands} ${(kv)functions} ${(kv)aliases})
   local choice="$(echo ${(F)${(kuo)executables}} | dmenu $opts)"
@@ -24,7 +25,7 @@ function launch() {
 }
 
 function power() {
-  local opts=($defaults -w 1920 -p "  " -dim 0.42 -sf '#cc6666')
+  local opts=($defaults -w 3448 -p "  " -dim 0.42)
 
   typeset -A actions=(
       'Lock'     'loginctl lock-session'
@@ -33,8 +34,6 @@ function power() {
       'Poweroff' 'systemctl poweroff'
   )
   
-  # Better, but doesn't preserve order:
-  # menu=${(Fk)action}
   menu="Lock\nSuspend\nReboot\nPoweroff"
   ${(z)actions[$(echo $menu | dmenu $opts)]}
 }
