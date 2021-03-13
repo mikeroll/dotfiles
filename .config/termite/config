@@ -14,60 +14,52 @@ cursor_shape = block
 size_hints = false
 filter_unmatched_urls = true
 
-font = Iosevka Term 10
+font = Iosevka Term 11
 
 
 [hints]
-font = Iosevka Term 10
+font = Iosevka Term 11
 
 
 [colors]
-# Base16 Tomorrow Night
-# Author: Chris Kempson (http://chriskempson.com)
 
-foreground      = #c5c8c6
-foreground_bold = #e0e0e0
-#cursor          = #e0e0e0
-background      = rgba(29, 31, 33, 0.95)
+# special
+foreground      = #24292e
+foreground_bold = #24292e
+background      = #f6f8fa
+highlight       = #c8e1ff 
 
-# 16 color space
+# black
+color0  = #24292e
+color8  = #6a737d
 
-# Black, Gray, Silver, White
-color0  = #1d1f21
-color8  = #969896
-color7  = #c5c8c6
-color15 = #ffffff
+# red
+color1  = #cb2431
+color9  = #d73a49
 
-# Red
-color1  = #cc6666
-color9  = #cc6666
+# green
+color2  = #22863a
+color10 = #28a745
 
-# Green
-color2  = #b5bd68
-color10 = #b5bd68
+# yellow
+color3  = #e36209
+color11 = #f9c513
 
-# Yellow
-color3  = #f0c674
-color11 = #f0c674
+# blue
+color4  = #005cc5
+color12 = #2188ff,
 
-# Blue
-color4  = #81a2be
-color12 = #81a2be
+# magenta
+color5  = #6f42c1
+color13 = #8a63d2
 
-# Purple
-color5  = #b294bb
-color13 = #b294bb
+# cyan
+color6  = #d03592
+color14 = #ea4aaa
 
-# Teal
-color6  = #8abeb7
-color14 = #8abeb7
+# white
+color7  = #6a737d
+color15 = #f6f8fa
 
-# Extra colors
-color16 = #de935f
-color17 = #a3685a
-color18 = #282a2e
-color19 = #373b41
-color20 = #b4b7b4
-color21 = #e0e0e0
 
 # vim: ft=dosini cms=#%s
