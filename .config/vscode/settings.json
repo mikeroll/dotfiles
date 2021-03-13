@@ -6,29 +6,33 @@
     "window.menuBarVisibility": "toggle",
     "workbench.colorTheme": "GitHub Light",
     "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#695d6980",
-        "terminal.foreground": "#464646",
-        "terminalCursor.background": "#464646",
-        "terminalCursor.foreground": "#464646",
-        "terminal.ansiBlack": "#F7F7F7",
-        "terminal.ansiBlue": "#686868",
-        "terminal.ansiBrightBlack": "#ABABAB",
-        "terminal.ansiBrightBlue": "#686868",
-        "terminal.ansiBrightCyan": "#868686",
-        "terminal.ansiBrightGreen": "#8E8E8E",
-        "terminal.ansiBrightMagenta": "#747474",
-        "terminal.ansiBrightRed": "#7C7C7C",
-        "terminal.ansiBrightWhite": "#101010",
-        "terminal.ansiBrightYellow": "#A0A0A0",
-        "terminal.ansiCyan": "#868686",
-        "terminal.ansiGreen": "#8E8E8E",
-        "terminal.ansiMagenta": "#747474",
-        "terminal.ansiRed": "#7C7C7C",
-        "terminal.ansiWhite": "#464646",
-        "terminal.ansiYellow": "#A0A0A0"
+        "editorCursor.foreground": "#695d6940",
+        "terminal.foreground": "#24292e",
+        "terminalCursor.background": "#24292e",
+        "terminalCursor.foreground": "#24292e",
+        "terminal.selectionBackground": "#c8e1ff",
+        "terminal.ansiBlack": "#24292e",
+        "terminal.ansiBrightBlack": "#6a737d",
+        "terminal.ansiRed": "#cb2431",
+        "terminal.ansiBrightRed": "#d73a49",
+        "terminal.ansiGreen": "#22863a",
+        "terminal.ansiBrightGreen": "#28a745",
+        "terminal.ansiYellow": "#e36209",
+        "terminal.ansiBrightYellow": "#f9c513",
+        "terminal.ansiBlue": "#005cc5",
+        "terminal.ansiBrightBlue": "#2188ff",
+        "terminal.ansiMagenta": "#6f42c1",
+        "terminal.ansiBrightMagenta": "#8a63d2",
+        "terminal.ansiCyan": "#d03592",
+        "terminal.ansiBrightCyan": "#ea4aaa",
+        "terminal.ansiWhite": "#586069",
+        "terminal.ansiBrightWhite": "#f6f8fa",
     },
     "explorer.openEditors.visible": 10,
     "workbench.editor.showTabs": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
     "workbench.settings.editor": "json",
     "editor.smoothScrolling": true,
     "explorer.confirmDragAndDrop": false,
@@ -62,7 +66,6 @@
     "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.formatOnSaveTimeout": 2500,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderIndentGuides": false,
@@ -109,6 +112,7 @@
     "python.linting.mypyEnabled": true,
     "python.linting.lintOnSave": true,
     "python.jediEnabled": false,
+    "python.languageServer": "Microsoft",
     "python.venvPath": "~/code/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "python.sortImports.args": [
@@ -129,6 +133,7 @@
     //
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
+    "go.gopath": "/Users/mike/code/go",
     //
     // Syntax-specific
     //
@@ -146,10 +151,14 @@
         "Vagrantfile": "ruby",
         "Pipfile": "toml"
     },
+    "[haskell]": {
+        "editor.fontLigatures": "'HSKL'"
+    },
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true,
         },
+        "editor.formatOnPaste": false,
         "editor.rulers": [
             88
         ]
