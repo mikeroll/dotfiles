@@ -174,6 +174,7 @@ AddPackage xorg-xsetroot # Classic X utility to set your root window background 
 AddPackage --foreign colorpicker # Click on a pixel on your screen and print its color value in RGB. Written for X11.
 AddPackage redshift # Adjusts the color temperature of your screen according to your surroundings.
 AddPackage capitaine-cursors # An x-cursor theme inspired by macOS and based on KDE Breeze
+AddPackage --foreign lounge-gtk-theme-git # Simple and clean theme, based on original Adwaita
 AddPackage --foreign picom-git # X compositor (fork of compton) (git-version)
 AddPackage --foreign polybar # A fast and easy-to-use status bar
 AddPackage --foreign dmenu2 # Fork of dmenu with many useful patches applied and additional options like screen select, dim or opacity change
