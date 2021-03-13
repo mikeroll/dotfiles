@@ -159,6 +159,7 @@ CopyFile /etc/X11/xorg.conf.d/00-keyboard.conf
 #
 # Desktop
 #
+AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
 AddPackage termite # A simple VTE-based terminal
 AddPackage bspwm # Tiling window manager based on binary space partitioning
 AddPackage sxhkd # Simple X hotkey daemon

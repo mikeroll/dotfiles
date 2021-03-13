@@ -1,0 +1,15 @@
+window:
+  padding: { x: 8, y: 8 }
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+font:
+  normal:
+    family: monospace
+
+  size: 11.0
+
+import:
+  - ~/.config/alacritty/github.colors.yml
