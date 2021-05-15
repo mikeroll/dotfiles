@@ -17,6 +17,7 @@ configstore/update-notifier-npm.json
 direnv/allow
 gnupg/
 asdf/tool-versions
+iterm2/AppSupport
 
 # Secrets
 aws/

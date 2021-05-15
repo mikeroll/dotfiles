@@ -18,7 +18,7 @@
             <string>hidutil</string>
             <string>property</string>
             <string>--matching</string>
-            <string>{"VendorID":0x5ac,"ProductID":0x27c}</string>
+            <string>{"VendorID":0x5ac,"ProductID":0x341}</string>
             <string>--set</string>
             <string>{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035},{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064}]}</string>
         </array>
