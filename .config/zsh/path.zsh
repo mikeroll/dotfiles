@@ -16,15 +16,15 @@ path=(
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     path=(
-        /usr/local/bin
+        "$HOMEBREW_PREFIX"/bin
         
         # GNU utils
-        /usr/local/opt/coreutils/libexec/gnubin
-        /usr/local/opt/grep/libexec/gnubin
-        /usr/local/opt/findutils/libexec/gnubin
+        "$HOMEBREW_PREFIX"/opt/coreutils/libexec/gnubin
+        "$HOMEBREW_PREFIX"/opt/grep/libexec/gnubin
+        "$HOMEBREW_PREFIX"/opt/findutils/libexec/gnubin
         
         # curl
-        /usr/local/opt/curl/bin
+        "$HOMEBREW_PREFIX"/opt/curl/bin
         
         # Rust
         /Users/mike/.local/share/cargo/bin

@@ -21,6 +21,7 @@ fi
 zcompile $HOME/.local/share/zinit/zinit.zsh
 source $HOME/.local/share/zinit/zinit.zsh
 
+zinit light _local/brew
 zinit light _local/asdf
 
 export DIRENV_LOG_FORMAT=
