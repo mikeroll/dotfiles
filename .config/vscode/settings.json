@@ -45,8 +45,6 @@
     //
     // Terminal
     //
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.external.linuxExec": "termite",
     "terminal.explorerKind": "external",

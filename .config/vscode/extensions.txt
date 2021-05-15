@@ -12,11 +12,11 @@ EditorConfig.EditorConfig
 fabiospampinato.vscode-open-in-browsers
 GitHub.github-vscode-theme
 JakeBecker.elixir-ls
-mauve.terraform
+HashiCorp.terraform
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
-ms-vscode.Go
+golang.Go
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-typescript-tslint-plugin
 pgourlain.erlang

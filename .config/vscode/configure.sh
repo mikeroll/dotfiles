@@ -11,6 +11,8 @@ case "$(uname -s)" in
         ;;
 esac
 
+mkdir -p "$confdir"
+
 for t in settings.json keybindings.json snippets; do
     ln -sfn "${thisdir}/${t}" "${confdir}/${t}"
 done
