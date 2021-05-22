@@ -53,5 +53,5 @@ elif [[ "$USER" == "$user" ]]; then
     if ! command -v aconfmgr; then 
         yay -Sy --noconfirm aconfmgr-git
     fi
-    aconfmgr apply
+    aconfmgr apply --paranoid
 fi
