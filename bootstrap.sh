@@ -11,9 +11,12 @@ if [[ "$USER" == 'root' ]]; then
     pacman -Sy --noconfirm zsh git sudo
 
     # Create me a user
-    if ! grep -q "$user" /etc/group || ! grep -q "$user" /etc/passwd; then
+    if ! grep -q "$user" /etc/group; then 
         groupadd "$user"
-        useradd -m -g "$user" -s $(which zsh) "$user"
+    fi 
+
+    if ! grep -q "$user" /etc/passwd; then
+        useradd -m -g "$user" -s "$(command -v zsh)" "$user"
         echo "Set password for user $user"
         passwd "$user"
     fi
