@@ -4,7 +4,7 @@ set -euo pipefail
 user=mike
 remote='https://github.com/mikeroll/dotfiles.git'
 localdir="${HOME}/dotfiles"
-branch='master'
+branch='goodboi'
 
 if [[ "$USER" == 'root' ]]; then
     # Install the essentials
@@ -32,16 +32,16 @@ if [[ "$USER" == 'root' ]]; then
     exec sudo -u "$user" bash "$0" "$@"
 
 elif [[ "$USER" == "$user" ]]; then
+    # Clone dotfiles
+    if ! ([[ -d "${localdir}" ]] && cd "${localdir}" && git rev-parse --is-inside-work-tree >/dev/null); then
+        git clone --branch "${branch}" "${remote}" "${localdir}"
+    fi
+
     # Install yay
     if ! command -v yay >/dev/null; then
         curl -sSL https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay-bin > yay.PKGBUILD
         makepkg -si --noconfirm -p yay.PKGBUILD
         rm -f yay.PKGBUILD
-    fi
-
-    # Clone dotfiles
-    if ! ([[ -d "${localdir}" ]] && cd "${localdir}" && git rev-parse --is-inside-work-tree >/dev/null); then
-        git clone --single-branch -b "${branch}" "${remote}" "${localdir}"
     fi
 
     # Install dotfiles
