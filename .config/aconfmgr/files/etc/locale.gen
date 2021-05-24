@@ -1,10 +1,11 @@
 be_BY.UTF-8 UTF-8  
 be_BY CP1251  
 be_BY@latin UTF-8  
+de_DE.UTF-8 UTF-8  
+de_DE ISO-8859-1  
+de_DE@euro ISO-8859-15  
 en_US.UTF-8 UTF-8  
 en_US ISO-8859-1  
 ru_RU.KOI8-R KOI8-R  
 ru_RU.UTF-8 UTF-8  
 ru_RU ISO-8859-5  
-ru_UA.UTF-8 UTF-8  
-ru_UA KOI8-U  

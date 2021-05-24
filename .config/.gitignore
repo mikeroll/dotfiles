@@ -29,11 +29,7 @@ docker/
 # vscode - managed separately
 Code - OSS
 
-# pulseaudio
 pulse/
-
-# dconf
+pipewire/
 dconf/
-
-# chromium
 chromium/
