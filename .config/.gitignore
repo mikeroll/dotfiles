@@ -15,8 +15,7 @@ zsh/.zplugin/plugins/_local---zinit
 zsh/.zcompdump
 zsh/.zhistory
 zsh/.zcompcache
-jupyter/profile_default/history.sqlite
-jupyter/profile_default/startup/README
+jupyter/*
 configstore/update-notifier-npm.json
 direnv/allow
 gnupg/

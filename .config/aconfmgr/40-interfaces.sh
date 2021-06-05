@@ -19,3 +19,4 @@ CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 AddPackage pamixer # Pulseaudio command-line mixer like amixer
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
+AddPackage pavucontrol # PulseAudio Volume Control

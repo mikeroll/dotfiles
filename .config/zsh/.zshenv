@@ -10,3 +10,4 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 
 source $ZDOTDIR/path.zsh
 source $ZDOTDIR/xdghacks.zsh
+source $ZDOTDIR/apptweaks.zsh

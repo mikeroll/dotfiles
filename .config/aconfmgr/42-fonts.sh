@@ -9,6 +9,7 @@ AddPackage tex-gyre-fonts # Substitute PostScript fonts in OpenType format
 AddPackage ttf-caladea # Google's Caladea font
 AddPackage ttf-carlito # Google's Carlito font
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+AddPackage ttf-font-awesome # Iconic font designed for Bootstrap
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage ttf-roboto # Google's signature family of fonts
 AddPackage --foreign ttf-iosevka # A slender monospace typeface. Shape

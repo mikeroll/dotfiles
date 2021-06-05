@@ -8,22 +8,26 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $wallpaper ~/pictures/wallpapers/andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg
 
 #
 # Output configuration
 #
-output "eDP-1" {
-    bg ~/pictures/wallpapers/lennart-borstelmann-11CN6GEQb_I-unsplash.jpg fill
+output * {
+    bg $wallpaper fill
+    # resolution --custom 3360x2100
+    # scale 2
+    # scale 1.1428
 }
+output eDP-1 pos 0 0
+output DP-2 pos -320 -1440
 
-bindsym XF86MonBrightnessUp exec light -A 1
-bindsym XF86MonBrightnessDown exec light -U 1
-
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 bindsym XF86AudioMute exec pamixer --toggle-mute
-bindsym XF86AudioRaiseVolume exec pamixer --increase 1
-bindsym XF86AudioLowerVolume exec pamixer --decrease 1
+bindsym XF86AudioRaiseVolume exec pamixer --increase 5
+bindsym XF86AudioLowerVolume exec pamixer --decrease 5
 
 
 #
@@ -31,8 +35,9 @@ bindsym XF86AudioLowerVolume exec pamixer --decrease 1
 #
 input "type:touchpad" {
     accel_profile adaptive
-    dwt enabled
+    dwt disabled
     tap enabled
+    click_method clickfinger
     natural_scroll enabled
     scroll_method two_finger
     scroll_factor 0.75
@@ -45,31 +50,72 @@ input "type:keyboard" {
     xkb_layout us,ru
 }
 
-### Idle configuration
+bindsym Ctrl+Space exec swaymsg -t get_inputs -r \
+                        | jq '[.[] | select(.type == "keyboard") | .xkb_active_layout_index][0] - 1 | fabs' \
+                        | xargs swaymsg 'input type:keyboard xkb_switch_layout'
+
+
 #
-# Example configuration:
+# Idle
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+          timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 600 'swaylock -f -i "$wallpaper"' resume 'swaymsg "output * dpms on"' \
+          lock 'swaylock -f -i "$wallpaper"' \
+          before-sleep 'swaylock -f -i $wallpaper'
+
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# L&F
+#
+default_border none
+default_floating_border none
+
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Qogir-Light'
+    # gsettings set org.gnome.desktop.interface icon-theme 'icon theme name'
+    gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors-light'
+    gsettings set org.gnome.desktop.interface font-name 'Sans 10'
+}
+
+
+#
+# Autostart
+#
+exec polkit-dumb-agent
+exec wlsunset -l 48.14 -L 11.58
+
+bar {
+    swaybar_command waybar
+}
+
+
+#
+# Launcher
+#
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
+set $menu exec $term --class=launcher -e sway-launcher-desktop
+
+
+#
+# Window rules
+#
+exec_always ~/.config/sway/inactive-opacity.py --opacity 0.95
+
+for_window [app_id="firefox" title="Sharing Indicator$"] kill
+
 
 ### Key bindings
 #
 # Basics:
 #
+    # Start the launcher
+    bindsym $mod+d exec $menu
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -196,22 +242,5 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while echo "$(date +'%Y-%m-%d %l:%M%p') $(cat /sys/class/power_supply/BAT0/capacity)%"; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*
