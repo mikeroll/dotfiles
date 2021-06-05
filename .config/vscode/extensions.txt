@@ -1,17 +1,23 @@
-alefragnani.Bookmarks
-alefragnani.project-manager
-be5invis.theme-verdandi
-beatsbury.severe-bluejay
-bibhasdn.unique-lines
+#
+# Extensions not present on openvsix
+#
+# alefragnani.Bookmarks
+# alefragnani.project-manager
+# be5invis.theme-verdandi
+# beatsbury.severe-bluejay
+# bibhasdn.unique-lines
+# JakeBecker.elixir-ls
+# pgourlain.erlang
+# pureux.grueling-hare
+# Rubymaniac.vscode-direnv
+
 bungcip.better-toml
 codezombiech.gitignore
 dbaeumer.vscode-eslint
 DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
-fabiospampinato.vscode-open-in-browsers
 GitHub.github-vscode-theme
-JakeBecker.elixir-ls
 HashiCorp.terraform
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
@@ -19,8 +25,5 @@ ms-python.python
 golang.Go
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-typescript-tslint-plugin
-pgourlain.erlang
-pureux.grueling-hare
 redhat.vscode-yaml
-Rubymaniac.vscode-direnv
 timonwong.shellcheck

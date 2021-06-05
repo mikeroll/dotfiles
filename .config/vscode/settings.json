@@ -2,7 +2,6 @@
     //
     // UI
     //
-    "window.zoomLevel": 0,
     "window.menuBarVisibility": "toggle",
     "workbench.colorTheme": "GitHub Light",
     "workbench.colorCustomizations": {
