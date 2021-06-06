@@ -1,0 +1,3 @@
+SUBSYSTEM=="pci", ATTR{power/control}="auto"
+SUBSYSTEM=="i2c", ATTR{power/control}="auto"
+
