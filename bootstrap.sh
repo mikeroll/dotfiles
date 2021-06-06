@@ -4,7 +4,7 @@ set -euo pipefail
 user=mike
 remote='https://github.com/mikeroll/dotfiles.git'
 localdir="${HOME}/dotfiles"
-branch='goodboi'
+branch="$0"
 
 if [[ "$USER" == 'root' ]]; then
     # Install the essentials
