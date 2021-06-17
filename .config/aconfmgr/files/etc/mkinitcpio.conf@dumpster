@@ -1,0 +1,3 @@
+MODULES=(i915 nouveau)
+HOOKS=(base systemd autodetect modconf block sd-vconsole lvm2 filesystems keyboard fsck)
+COMPRESSION="zstd"

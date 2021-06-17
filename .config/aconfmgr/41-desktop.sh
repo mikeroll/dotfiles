@@ -14,7 +14,6 @@ AddPackage sway
 AddPackage swayidle # Idle management daemon for Wayland
 AddPackage swaylock # Screen locker for Wayland
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
-AddPackage xorg-xwayland
 AddPackage libnotify # Library for sending desktop notifications
 AddPackage mako # Lightweight notification daemon for Wayland
 AddPackage gnome-keyring # Stores passwords and encryption keys
@@ -37,7 +36,7 @@ AddPackage --foreign qogir-gtk-theme # Qogir is a flat Design theme for GTK
 #
 AddPackage alacritty
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
+AddPackage visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 AddPackage firefox # Standalone web browser from mozilla.org
 
 
@@ -61,6 +60,3 @@ AddPackage --foreign direnv-bin # a shell extension that manages your environmen
 AddPackage --foreign asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 
 AddPackage docker # Pack, ship and run any application as a lightweight container
-CopyFile /etc/docker/daemon.json
-CopyFile /etc/docker/key.json 600
-CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service

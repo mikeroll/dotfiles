@@ -16,9 +16,10 @@ AddPackage lvm2
 CopyFile /etc/locale.gen
 CopyFile /etc/locale.conf
 CopyFile /etc/vconsole.conf
-CopyFile /etc/hostname
-CopyFile /etc/hosts
 
-CreateLink /etc/localtime /usr/share/zoneinfo/Europe/Berlin
+WriteHostsFile "${HOSTNAME}"
+ConfigureMakepkg
+
+CreateLink /etc/localtime /usr/share/zoneinfo/"${TIMEZONE}"
 CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
 CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service

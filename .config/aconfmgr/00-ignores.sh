@@ -31,6 +31,9 @@ IgnorePath '/var/*'
 # TODO: Store passwords per-user
 IgnorePath '/etc/NetworkManager/system-connections/*'
 
+IgnorePath '/etc/docker'
+
 # These are created before aconfmgr gets a chance to run, so let's just skip them
 IgnorePath '/etc/sudoers.d/mike'
 IgnorePath '/etc/zsh/zshenv'
+IgnorePath '/etc/hostname'

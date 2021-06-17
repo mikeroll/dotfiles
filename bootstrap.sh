@@ -4,9 +4,12 @@ set -euo pipefail
 user=mike
 remote='https://github.com/mikeroll/dotfiles.git'
 localdir="${HOME}/dotfiles"
-branch="$0"
+hostname="$1"
 
 if [[ "$USER" == 'root' ]]; then
+    # Set the hostname
+    echo "${hostname}" >| /etc/hostname
+
     # Install the essentials
     pacman -Sy --noconfirm zsh git sudo
 
@@ -34,7 +37,7 @@ if [[ "$USER" == 'root' ]]; then
 elif [[ "$USER" == "$user" ]]; then
     # Clone dotfiles
     if ! ([[ -d "${localdir}" ]] && cd "${localdir}" && git rev-parse --is-inside-work-tree >/dev/null); then
-        git clone --branch "${branch}" "${remote}" "${localdir}"
+        git clone "${remote}" "${localdir}"
     fi
 
     # Install yay
