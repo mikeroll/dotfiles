@@ -4,17 +4,25 @@ set -euo pipefail
 thisdir="$(dirname "$0:A")"
 case "$(uname -s)" in
     Darwin)
-        confdir="$HOME/Library/Application Support/Code/User"
+        confdirs=(
+            "$HOME/Library/Application Support/Code/User"
+        )
         ;;
     Linux)
-        confdir="$HOME/.config/Code - OSS/User"
+        confdirs=(
+            "$HOME/.config/Code - OSS/User"
+            "$HOME/.config/Code/User"
+        )
         ;;
 esac
 
-mkdir -p "$confdir"
 
-for t in settings.json keybindings.json snippets; do
-    ln -sfn "${thisdir}/${t}" "${confdir}/${t}"
+for confdir in "${confdirs[@]}"; do
+    mkdir -p "$confdir"
+
+    for t in settings.json keybindings.json snippets; do
+        ln -sfn "${thisdir}/${t}" "${confdir}/${t}"
+    done
 done
 
 comm -13 \

@@ -27,6 +27,7 @@ docker/
 
 # vscode - managed separately
 Code - OSS
+Code
 
 pulse/
 pipewire/

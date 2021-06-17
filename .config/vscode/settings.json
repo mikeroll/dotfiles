@@ -2,7 +2,7 @@
     //
     // UI
     //
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "GitHub Light",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#695d6940",
@@ -32,6 +32,7 @@
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
     "workbench.editor.decorations.colors": true,
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
     "editor.smoothScrolling": true,
     "explorer.confirmDragAndDrop": false,
@@ -88,9 +89,7 @@
         "suppressFileNotUnderSourceControlWarning": false,
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
+        "suppressNoRepositoryWarning": false
     },
     "gitlens.blame.avatars": false,
     "gitlens.blame.format": "${author|16?} ${agoOrDate|14-}",
@@ -108,8 +107,6 @@
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.lintOnSave": true,
-    "python.jediEnabled": false,
-    "python.languageServer": "Microsoft",
     "python.venvPath": "~/code/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "python.sortImports.args": [
