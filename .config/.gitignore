@@ -36,3 +36,8 @@ chromium/
 pavucontrol.ini
 emacs/eln-cache
 emacs/*~
+htop/htoprc
+gtk-2.0/gtkfilechooser.ini
+
+op/
+Perimeter81/
