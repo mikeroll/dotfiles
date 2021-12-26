@@ -1,0 +1,18 @@
+profile clamshell-1 {
+  output eDP-1 enable
+  output DP-1 enable
+}
+
+profile clamshell-2 {
+  output eDP-1 disable
+  output DP-2 enable
+}
+
+profile clamshell-3 {
+  output eDP-1 disable
+  output DP-3 enable
+}
+
+profile laptop {
+  output eDP-1 enable
+}

@@ -1,0 +1,9 @@
+group-by=category
+default-timeout=5000
+font=sans 13px
+background-color=#000000A0
+border-color=#00000020
+progress-color=over #FFFFFF20
+width=350
+margin=10
+padding=10

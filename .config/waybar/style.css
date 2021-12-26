@@ -1,16 +1,15 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans, "Font Awesome 5 Free";
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 2px #000;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 13;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .3s;
@@ -22,7 +21,7 @@ window#waybar.hidden {
 
 
 window#waybar.empty {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 
