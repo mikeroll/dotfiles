@@ -33,3 +33,6 @@ pulse/
 pipewire/
 dconf/
 chromium/
+pavucontrol.ini
+emacs/eln-cache
+emacs/*~
