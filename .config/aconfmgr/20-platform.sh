@@ -34,4 +34,9 @@ CopyFile /etc/udev/rules.d/90-runtime-pm.rules
 CopyFile /etc/sysctl.d/10-vm.conf
 
 # Device tweaks
+AddPackage usbutils # A collection of USB tools to query connected USB devices
+CopyFile /etc/modprobe.d/psmouse.conf
 CopyFile /etc/udev/hwdb.d/99-laptop-keyboard.hwdb
+
+# SSD TRIM
+CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer

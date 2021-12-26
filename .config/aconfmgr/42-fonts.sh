@@ -4,16 +4,18 @@
 AddPackage --foreign fonts-meta-base
 AddPackage --foreign fonts-meta-extended-lt
 AddPackage noto-fonts # Google Noto TTF fonts
+AddPackage noto-fonts-emoji # Google Noto emoji fonts
+AddPackage otf-fira-sans # Mozilla's sans-serif typeface designed for Firefox OS
 AddPackage otf-overpass # An open source font family inspired by Highway Gothic esp. suited for signs, lettering and web sites
 AddPackage tex-gyre-fonts # Substitute PostScript fonts in OpenType format
+AddPackage ttc-iosevka # Typeface family designed for coding, terminal use and technical documents.
 AddPackage ttf-caladea # Google's Caladea font
 AddPackage ttf-carlito # Google's Carlito font
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage ttf-font-awesome # Iconic font designed for Bootstrap
+AddPackage ttf-iosevka-nerd # Typeface family designed for coding, terminal use and technical documents (Nerd Fonts)
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage ttf-roboto # Google's signature family of fonts
-AddPackage --foreign ttf-iosevka # A slender monospace typeface. Shape
-AddPackage --foreign ttf-iosevka-term # A slender monospace typeface. Shape
 AddPackage --foreign ttf-courier-prime # Monospace Courier font alternative optimized for screenplays
 AddPackage --foreign ttf-gelasio-ib # Gelasio is designed to be metrics compatible with Georgia in its Regular, Bold, Italic and Bold Italic weights. Interpolated Medium, medium Italic, SemiBold and SemiBold Italic have now been added as well.
 AddPackage --foreign ttf-merriweather # A typeface that is pleasant to read on screens by Sorkin Type Co
