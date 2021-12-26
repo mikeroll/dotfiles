@@ -48,8 +48,8 @@ elif [[ "$USER" == "$user" ]]; then
     fi
 
     # Install dotfiles
-    for dir in .config .icons bin; do
-        [[ -d ~/"$dir" ]] || ln -sfn dotfiles/"$dir" ~/"$dir"
+    for dir in .config .local/share/applications .icons bin; do
+        [[ -d ~/"$dir" ]] || ln -sfn "${localdir}/$dir" ~/"$dir"
     done
     
     # Apply aconfmgr state
