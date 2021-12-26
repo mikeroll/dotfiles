@@ -1,7 +1,8 @@
 colors:
   # Default colors
   primary:
-    background: "0xf6f8fa"
+    background: "0xffffff"
+    # background: "0xf6f8fa"
     foreground: "0x24292e"
 
   selection:
