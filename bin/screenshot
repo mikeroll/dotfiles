@@ -1,0 +1,37 @@
+#!/usr/bin/env zsh
+SCREENSHOT_DIR="$HOME/pictures/screenshots"
+SLURP_STYLE=("-b" "FFFFFF80" "-w" 1)
+
+function shoot() {
+  local filename="${SCREENSHOT_DIR}/$(date +%F_%H:%M:%S).png"
+  local mode="$1"
+  local geo
+
+  mkdir -p "${SCREENSHOT_DIR}"
+  {
+    case "${mode}" in
+      all)
+        grim - 
+        ;;
+      screen)
+        slurp "${SLURP_STYLE[@]}" -o -r \
+        | grim -g - -
+        ;;
+      window)
+        swaymsg -t get_tree \
+        | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' \
+        | slurp "${SLURP_STYLE[@]}" -r \
+        | grim -g - -
+        ;;
+      region)
+        slurp "${SLURP_STYLE[@]}" \
+        | grim -g - -
+        ;;
+    esac
+  } \
+  | swappy -f - -o - \
+  | tee "${filename}" \
+  | wl-copy
+}
+
+shoot "${1:-"all"}"
