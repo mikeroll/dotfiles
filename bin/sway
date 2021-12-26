@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+logdir="${XDG_DATA_HOME:-$HOME/.local/share}/sway"
+logfile="${logdir}/session.log"
+mkdir -p "${logdir}"
+
+exec /usr/bin/sway &>| "${logfile}"
