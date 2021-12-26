@@ -42,6 +42,7 @@
     "window.titleBarStyle": "native",
     "scm.defaultViewMode": "tree",
     "search.useGlobalIgnoreFiles": true,
+    "extensions.ignoreRecommendations": true,
     //
     // Terminal
     //
@@ -73,11 +74,12 @@
         80,
         120
     ],
+    "editor.bracketPairColorization.enabled": false,
+    "editor.suggest.preview": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "openInBrowsers.browser": "Firefox Nightly",
     //
     // Git
     //
@@ -119,15 +121,11 @@
     "javascript.format.enable": false,
     "javascript.validate.enable": false,
     //
-    // Rust
-    //
-    "rust-client.rustupPath": "/Users/mike/.local/share/cargo/bin/rustup",
-    //
     // Go
     //
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
-    "go.gopath": "/Users/mike/code/go",
+    "go.gopath": "~/code/go",
     //
     // Syntax-specific
     //

@@ -1,7 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "shift+cmd+g",
+        "key": "ctrl+shift+g",
         "command": "workbench.view.scm"
     },
     {
@@ -15,15 +15,25 @@
         "when": "terminalFocus"
     },
     {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
         "command": "notifications.toggleList",
         "key": "ctrl+escape"
     },
     {
         "command": "editor.action.deleteLines",
-        "key": "cmd+shift+backspace",
+        "key": "ctrl+shift+backspace",
     },
     {
         "command": "git.checkout",
-        "key": "cmd+shift+=",
-    }
+        "key": "ctrl+shift+=",
+    },
 ]
