@@ -40,8 +40,6 @@ set $font "Sans 10"
 
 output * bg $wallpaper fill
 
-#set $cl_high #f6f8fa
-#set $cl_high #ffffff20
 set $cl_high #00000020
 set $cl_indi #d9d8d8
 set $cl_back #00000080
@@ -107,8 +105,6 @@ set $cmd_toggle_input_layout swaymsg -t get_inputs -r \
 
 bar swaybar_command waybar
 
-exec python $swaydir/sway_sidekick.py
-
 exec swayidle -w \
     timeout 300 'swaymsg "output * dpms off"' \
          resume 'swaymsg "output * dpms on"' \
@@ -116,6 +112,8 @@ exec swayidle -w \
          resume 'swaymsg "output * dpms on"' \
     before-sleep '$cmd_lock_session' \
     lock '$cmd_swaylock' \
+
+exec autotiling
 
 exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 exec export SSH_AUTH_SOCK
@@ -200,11 +198,6 @@ $bindsym $mod+s floating toggle
 $bindsym $mod+Shift+s focus mode_toggle
 $bindsym $mod+b splith
 $bindsym $mod+v splitv
-# TODO: autosplit
-
-# Close window via external closer (such as fadeout script)
-# $bindsym $mod+q mark closing; exec sway-fade out
-# for_window [con_mark="closed"] kill
 
 # Close window
 $bindsym $mod+q kill

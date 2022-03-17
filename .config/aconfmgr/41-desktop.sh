@@ -15,8 +15,8 @@ AddPackage swaylock # Screen locker for Wayland
 AddPackage wl-clipboard
 AddPackage xdg-desktop-portal # Desktop integration portals for sandboxed apps
 AddPackage xdg-user-dirs
+AddPackage --foreign autotiling-git
 AddPackage --foreign clipman
-AddPackage --foreign i3ipc-python-git # An improved Python library to control i3wm
 AddPackage --foreign notify-send.sh # notify-send drop-in replacement with more features
 AddPackage --foreign sway-launcher-desktop # TUI Application launcher with Desktop Entry support.
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors
