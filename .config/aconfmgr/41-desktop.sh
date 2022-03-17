@@ -43,7 +43,10 @@ AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage foliate # A simple and modern GTK eBook reader
 AddPackage imv # Image viewer for Wayland and X11
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
-AddPackage --foreign visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
+
+AddPackage code
+AddPackage --foreign code-features
+AddPackage --foreign code-marketplace
 
 
 #
