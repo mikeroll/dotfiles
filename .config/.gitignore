@@ -41,3 +41,5 @@ gtk-2.0/gtkfilechooser.ini
 
 op/
 Perimeter81/
+
+nvim/plugin/packer_compiled.lua
