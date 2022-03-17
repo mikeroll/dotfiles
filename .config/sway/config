@@ -71,7 +71,7 @@ set $launcher $cmd_term --class=launcher -e sway-launcher-desktop
 # Window rules
 #
 
-for_window [app_id="firefox" title="Sharing Indicator$"] kill # floating enable, sticky enable, border none
+for_window [app_id="firefox" title="Sharing Indicator$"] floating enable, sticky enable, border none
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
 for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 565 height 610
 
@@ -97,11 +97,10 @@ set $cmd_toggle_input_layout swaymsg -t get_inputs -r \
   | xargs swaymsg 'input type:keyboard xkb_switch_layout'
 
 
-
 #
 # Run!
 #
-# xwayland disable
+#xwayland disable
 
 bar swaybar_command waybar
 
