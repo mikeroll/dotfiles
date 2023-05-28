@@ -1,12 +1,14 @@
-IgnorePath '*/.updated'
 IgnorePath '*/.pwd.lock'
+IgnorePath '*/.updated'
 IgnorePath '/boot/*'
 IgnorePath '/etc/adjtime'
 IgnorePath '/etc/ca-certificates/*'
+IgnorePath '/etc/credstore*'
 IgnorePath '/etc/fstab'
 IgnorePath '/etc/group*'
 IgnorePath '/etc/gshadow*'
 IgnorePath '/etc/ld.so.cache'
+IgnorePath '/etc/lvm'
 IgnorePath '/etc/machine-id'
 IgnorePath '/etc/mkinitcpio.d/*'
 IgnorePath '/etc/os-release'
@@ -31,7 +33,10 @@ IgnorePath '/var/*'
 # TODO: Store passwords per-user
 IgnorePath '/etc/NetworkManager/system-connections/*'
 
+IgnorePath '/etc/cni/*'
 IgnorePath '/etc/docker'
+IgnorePath '/etc/subuid*'
+IgnorePath '/etc/subgid*'
 
 # These are created before aconfmgr gets a chance to run, so let's just skip them
 IgnorePath '/etc/sudoers.d/mike'

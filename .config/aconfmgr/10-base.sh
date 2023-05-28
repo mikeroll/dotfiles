@@ -1,15 +1,15 @@
 #
 # Bootstrap
 #
+AddPackage archlinux-keyring # Arch Linux PGP keyring
 AddPackage --foreign yay-bin # Yet another yogurt. Pacman wrapper and AUR helper written in go. Pre-compiled.
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
-
 
 #
 # Basics
 #
 AddPackage base # Minimal package set to define a basic Arch Linux installation
-AddPackageGroup base-devel
+AddPackage base-devel # Basic tools to build Arch Linux packages
 AddPackage linux # The Linux kernel and modules
 AddPackage linux-headers # Headers and scripts for building modules for the Linux kernel
 AddPackage sudo # Give certain users the ability to run some commands as root

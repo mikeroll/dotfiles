@@ -1,7 +1,6 @@
 function WriteHostsFile() {
     local hostname="$1"
-    local file="$(GetPackageOriginalFile filesystem /etc/hosts)"
-    cat <<EOF >> "${file}"
+    cat <<EOF >> "$(GetPackageOriginalFile filesystem /etc/hosts)"
 127.0.0.1	localhost
 ::1         localhost
 127.0.1.1	${hostname}.localdomain	${hostname}
@@ -9,8 +8,7 @@ EOF
 }
 
 function ConfigureMakepkg() {
-    local file="$(GetPackageOriginalFile pacman /etc/makepkg.conf)"
-    sed -i "/MAKEFLAGS=/c\MAKEFLAGS=\"-j$(nproc)\"" "${file}"
+    sed -i "/MAKEFLAGS=/c\MAKEFLAGS=\"-j$(nproc)\"" "$(GetPackageOriginalFile pacman /etc/makepkg.conf)"
 }
 
 function CopyHostSpecificFile() {

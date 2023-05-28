@@ -11,8 +11,12 @@ dumpster)
 	AddPackage intel-ucode
 	AddPackage fwupd # Simple daemon to allow session software to update firmware
 
+	AddPackage intel-gpu-tools # Tools for development and testing of the Intel DRM driver
 	CopyFile /etc/modprobe.d/i915.conf
 	AddPackage intel-media-driver
+
+	CopyFile /etc/modprobe.d/nouveau.conf
+	CopyFile /etc/udev/rules.d/00-no-nvidia.rules
 
 	AddPackage light # Program to easily change brightness on backlight-controllers.
 	CreateDir /etc/light

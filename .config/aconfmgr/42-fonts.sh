@@ -6,16 +6,16 @@ AddPackage --foreign fonts-meta-extended-lt
 AddPackage noto-fonts # Google Noto TTF fonts
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage otf-fira-sans # Mozilla's sans-serif typeface designed for Firefox OS
-AddPackage otf-font-awesome-5
 AddPackage otf-overpass # An open source font family inspired by Highway Gothic esp. suited for signs, lettering and web sites
 AddPackage tex-gyre-fonts # Substitute PostScript fonts in OpenType format
 AddPackage ttc-iosevka # Typeface family designed for coding, terminal use and technical documents.
 AddPackage ttf-caladea # Google's Caladea font
 AddPackage ttf-carlito # Google's Carlito font
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
-AddPackage ttf-iosevka-nerd # Typeface family designed for coding, terminal use and technical documents (Nerd Fonts)
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage ttf-roboto # Google's signature family of fonts
+AddPackage ttf-nerd-fonts-symbols # High number of extra glyphs from popular 'iconic fonts'
+AddPackage --foreign otf-font-awesome-5 # Iconic font designed for Bootstrap (version 5.x)
 AddPackage --foreign ttf-courier-prime # Monospace Courier font alternative optimized for screenplays
 AddPackage --foreign ttf-gelasio-ib # Gelasio is designed to be metrics compatible with Georgia in its Regular, Bold, Italic and Bold Italic weights. Interpolated Medium, medium Italic, SemiBold and SemiBold Italic have now been added as well.
 AddPackage --foreign ttf-merriweather # A typeface that is pleasant to read on screens by Sorkin Type Co
@@ -78,3 +78,8 @@ CreateLink /etc/fonts/conf.d/69-urw-z003.conf /usr/share/fontconfig/conf.default
 CreateLink /etc/fonts/conf.d/80-delicious.conf /usr/share/fontconfig/conf.default/80-delicious.conf
 CreateLink /etc/fonts/conf.d/81-ubuntu.conf /usr/share/fontconfig/conf.default/81-ubuntu.conf
 CreateLink /etc/fonts/conf.d/90-synthetic.conf /usr/share/fontconfig/conf.default/90-synthetic.conf
+
+
+RemoveFile /etc/fonts/conf.d/62-google-crosextra-carlito.conf
+CreateLink /etc/fonts/conf.d/62-carlito.conf /usr/share/fontconfig/conf.default/62-carlito.conf
+CreateLink /etc/fonts/conf.d/10-nerd-font-symbols.conf /usr/share/fontconfig/conf.avail/10-nerd-font-symbols.conf
