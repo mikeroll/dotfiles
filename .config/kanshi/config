@@ -1,18 +1,42 @@
-profile clamshell-1 {
-  output eDP-1 enable
-  output DP-1 enable
-}
-
-profile clamshell-2 {
-  output eDP-1 disable
-  output DP-2 enable
-}
-
-profile clamshell-3 {
-  output eDP-1 disable
-  output DP-3 enable
-}
-
 profile laptop {
   output eDP-1 enable
+}
+
+profile ext-1 {
+  output eDP-1 enable
+  output DP-1 enable
+  exec swaymsg workspace 10, move workspace to DP-1
+  exec swaymsg workspace 9, move workspace to DP-1
+  exec swaymsg workspace 8, move workspace to DP-1
+  exec swaymsg workspace 7, move workspace to DP-1
+  exec swaymsg workspace 6, move workspace to DP-1
+  exec swaymsg workspace 5, move workspace to DP-1
+  exec swaymsg workspace 4, move workspace to DP-1
+  exec swaymsg workspace 3, move workspace to DP-1
+}
+
+profile ext-2 {
+  output eDP-1 enable
+  output DP-2 enable
+  exec swaymsg workspace 10, move workspace to DP-2
+  exec swaymsg workspace 9, move workspace to DP-2
+  exec swaymsg workspace 8, move workspace to DP-2
+  exec swaymsg workspace 7, move workspace to DP-2
+  exec swaymsg workspace 6, move workspace to DP-2
+  exec swaymsg workspace 5, move workspace to DP-2
+  exec swaymsg workspace 4, move workspace to DP-2
+  exec swaymsg workspace 3, move workspace to DP-2
+}
+
+profile ext-3 {
+  output eDP-1 enable
+  output DP-3 enable
+  exec swaymsg workspace 10, move workspace to DP-3
+  exec swaymsg workspace 9, move workspace to DP-3
+  exec swaymsg workspace 8, move workspace to DP-3
+  exec swaymsg workspace 7, move workspace to DP-3
+  exec swaymsg workspace 6, move workspace to DP-3
+  exec swaymsg workspace 5, move workspace to DP-3
+  exec swaymsg workspace 4, move workspace to DP-3
+  exec swaymsg workspace 3, move workspace to DP-3
 }

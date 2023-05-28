@@ -1,6 +1,28 @@
 set $swaydir ~/.config/sway
 
 #
+# Outputs and workspaces
+#
+set $main_output eDP-1
+set $extra_outputs DP-1 DP-2
+
+bindswitch --locked --reload lid:on output $main_output disable
+bindswitch --locked --reload lid:off output $main_output enable
+
+workspace 1 output $main_output
+workspace 2 output $main_output
+workspace 3 output $extra_outputs $main_output
+workspace 4 output $extra_outputs $main_output
+workspace 5 output $extra_outputs $main_output
+workspace 6 output $extra_outputs $main_output
+workspace 7 output $extra_outputs $main_output
+workspace 8 output $extra_outputs $main_output
+workspace 9 output $extra_outputs $main_output
+workspace 10 output $extra_outputs $main_output
+workspace_auto_back_and_forth yes
+exec_always 'pkill kanshi; kanshi'
+
+#
 # Input configuration
 #
 input "type:keyboard" {
@@ -117,9 +139,6 @@ exec autotiling
 exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 exec export SSH_AUTH_SOCK
 
-bindswitch --locked --reload lid:on output eDP-1 disable
-bindswitch --locked --reload lid:off output eDP-1 enable
-exec_always pkill kanshi; exec kanshi
 exec lxpolkit
 exec wlsunset -l 48.14 -L 11.58
 
@@ -179,6 +198,9 @@ $bindsym $mod+8 workspace number 8
 $bindsym $mod+9 workspace number 9
 $bindsym $mod+0 workspace number 10
 
+# Cycle betwee two recently focused workspaces
+$bindsym $mod+grave workspace back_and_forth
+
 # Move windows between workspaces
 $bindsym $mod+Shift+1 move container to workspace number 1
 $bindsym $mod+Shift+2 move container to workspace number 2
@@ -193,7 +215,7 @@ $bindsym $mod+Shift+0 move container to workspace number 10
 
 # Layout control
 $bindsym $mod+f fullscreen
-$bindsym $mod+s floating toggle
+$bindsym $mod+s floating toggle, sticky toggle
 $bindsym $mod+Shift+s focus mode_toggle
 $bindsym $mod+b splith
 $bindsym $mod+v splitv
