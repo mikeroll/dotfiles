@@ -1,1 +1,40 @@
-.DS_Store
+# Non-compliant + ephemeral
+.config/chromium
+.config/Code
+.config/Code - OSS
+.config/Electron
+.config/Perimeter81
+
+# Sensitive + ephemeral
+.config/aws
+.config/cni
+.config/configstore
+.config/dagger
+.config/dconf
+.config/docker
+.config/gh
+.config/k9s
+.config/op
+.config/simple-scan
+.config/zsh/.zhistory
+
+# Ephemeral
+.config/btop
+.config/evince
+.config/gnome-control-center
+.config/gtk-[234].0
+.config/pavucontrol.ini
+.config/pipewire
+.config/pulse
+.config/QtProject.conf
+.config/vlc
+
+.config/zsh/**/*.zwc
+.config/zsh/.zcompcache
+.config/zsh/.zcompdump
+.config/zsh/.zplugin/completions
+.config/zsh/.zplugin/plugins/*
+!.config/zsh/.zplugin/plugins/_local---*
+.config/zsh/.zplugin/plugins/_local---zinit
+
+.local/share/applications/mimeinfo.cache
