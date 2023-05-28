@@ -28,7 +28,7 @@ exec_always 'pkill kanshi; kanshi'
 input "type:keyboard" {
     repeat_delay 210
     repeat_rate 60
-    xkb_layout us,ru
+    xkb_layout us,ru,de
 }
 
 input "type:touchpad" {
@@ -112,12 +112,7 @@ set $cmd_volume_mute    pamixer --toggle-mute
 
 set $cmd_exit_menu      swaynag -t warning -m 'Exit?' -b 'Yep' 'swaymsg exit'
 
-# https://github.com/swaywm/sway/issues/6011
-# set $cmd_toggle_input_layout swaymsg input "type:keyboard" xkb_switch_layout next
-set $cmd_toggle_input_layout swaymsg -t get_inputs -r \
-  | jq '[.[] | select(.type == "keyboard") | .xkb_active_layout_index][0] - 1 | fabs' \
-  | xargs swaymsg 'input type:keyboard xkb_switch_layout'
-
+set $cmd_toggle_input_layout swaymsg input "type:keyboard" xkb_switch_layout next
 
 #
 # Run!
@@ -164,7 +159,7 @@ $bindsym XF86AudioRaiseVolume  exec $cmd_volume_up
 $bindsym XF86AudioLowerVolume  exec $cmd_volume_down
 $bindsym XF86AudioMute         exec $cmd_volume_mute 
 
-$bindsym --locked Ctrl+Space exec $cmd_toggle_input_layout
+$bindsym --locked $mod+Ctrl+Space exec $cmd_toggle_input_layout
 
 # Move focus around
 $bindsym $mod+h focus left
