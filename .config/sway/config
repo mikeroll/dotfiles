@@ -131,9 +131,6 @@ exec swayidle -w \
 
 exec autotiling
 
-exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-exec export SSH_AUTH_SOCK
-
 exec lxpolkit
 exec wlsunset -l 48.14 -L 11.58
 
