@@ -1,15 +1,2 @@
-function envfile() {
-    local file="$1"
-    awk 'NF && !/^ *#/{print}' "$file" | while IFS='=' read -r key val; do
-        export $key="$val"
-    done
-}
-
-function maybe_activate_venv() {
-    [[ -d .venv ]] && . .venv/bin/activate
-    unset PS1
-}
-
-maybe_activate_venv
-
 set -a
+use rtx
