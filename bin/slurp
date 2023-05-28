@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+SLURP_STYLE=("-b" "FFFFFF80" "-w" 1)
+
+exec /usr/bin/slurp "${SLURP_STYLE[@]}" "$@"

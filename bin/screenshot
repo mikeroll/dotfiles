@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 SCREENSHOT_DIR="$HOME/pictures/screenshots"
-SLURP_STYLE=("-b" "FFFFFF80" "-w" 1)
 
 function shoot() {
   local filename="${SCREENSHOT_DIR}/$(date +%F_%H:%M:%S).png"
@@ -14,17 +13,17 @@ function shoot() {
         grim - 
         ;;
       screen)
-        slurp "${SLURP_STYLE[@]}" -o -r \
+        slurp -o -r \
         | grim -g - -
         ;;
       window)
         swaymsg -t get_tree \
         | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' \
-        | slurp "${SLURP_STYLE[@]}" -r \
+        | slurp -r \
         | grim -g - -
         ;;
       region)
-        slurp "${SLURP_STYLE[@]}" \
+        slurp \
         | grim -g - -
         ;;
     esac
