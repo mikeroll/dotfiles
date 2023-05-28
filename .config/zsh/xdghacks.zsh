@@ -6,11 +6,8 @@
 : "${XDG_DATA_HOME:=$HOME/.local/share}"
 : "${XDG_RUNTIME_DIR:=$TMPDIR}"
 
-# asdf
-export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME="${XDG_CONFIG_HOME}/asdf/tool-versions"
-export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
-export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="${XDG_CONFIG_HOME}/asdf/python-default-packages"
+# rtx
+export RTX_PYTHON_DEFAULT_PACKAGES_FILE="${XDG_CONFIG_HOME}/rtx/python-default-packages"
 
 # android
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME}/android"

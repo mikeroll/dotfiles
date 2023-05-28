@@ -6,39 +6,13 @@
 #
 # PATHs
 #
-# {{{
 source $ZDOTDIR/path.zsh
-# }}}
+
 
 #
 # zinit plugins
 #
-# {{{
-if [[ ! -f $HOME/.local/share/zinit/zinit.zsh ]]; then
-  git clone https://github.com/zdharma/zinit.git $HOME/.local/share/zinit
-fi
-
-zcompile $HOME/.local/share/zinit/zinit.zsh
-source $HOME/.local/share/zinit/zinit.zsh
-
-zinit light _local/brew
-zinit light _local/asdf
-
-export DIRENV_LOG_FORMAT=
-zinit light _local/direnv
-
-zinit light zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
-zinit light zdharma/fast-syntax-highlighting
-FAST_HIGHLIGHT_STYLES[variable]="none"
-zle_highlight+=(paste:none)
-
-zinit light hlissner/zsh-autopair
-
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
-# }}}
+source $ZDOTDIR/plugins.zsh
 
 #
 # Environment
@@ -78,18 +52,24 @@ function mkcdir() { mkdir -p "$1"; cd "$1" }
 typeset -A keys
 
 keys=(
-  'Home'      "$terminfo[khome]"
-  'End'       "$terminfo[kend]"
-  'Insert'    "$terminfo[kich1]"
-  'Backspace' "$terminfo[kbs]"
-  'Delete'    "$terminfo[kdch1]"
-  'Up'        "$terminfo[kcuu1]"
-  'Down'      "$terminfo[kcud1]"
-  'Left'      "$terminfo[kcub1]"
-  'Right'     "$terminfo[kcuf1]"
-  'PageUp'    "$terminfo[kpp]"
-  'PageDown'  "$terminfo[knp]"
-  'ShiftTab'  "$terminfo[kcbt]"
+  'Home'          "$terminfo[khome]"
+  'End'           "$terminfo[kend]"
+  'Insert'        "$terminfo[kich1]"
+  'Backspace'     "$terminfo[kbs]"
+  'Delete'        "$terminfo[kdch1]"
+  'Up'            "$terminfo[kcuu1]"
+  'Down'          "$terminfo[kcud1]"
+  'Left'          "$terminfo[kcub1]"
+  'Right'         "$terminfo[kcuf1]"
+  'PageUp'        "$terminfo[kpp]"
+  'PageDown'      "$terminfo[knp]"
+
+  'ShiftTab'      "$terminfo[kcbt]"
+
+  'CtrlLeft'      "$terminfo[kLFT5]"
+  'CtrlRight'     "$terminfo[kRIT5]"
+  'CtrlDelete'    "$terminfo[kDC5]"
+  'CtrlBackspace' "$terminfo[cub1]"
 )
 
 # Use emacs-style keys
@@ -100,16 +80,22 @@ autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-[[ -n "$keys[Home]"      ]] && bindkey -- "$keys[Home]"      beginning-of-line
-[[ -n "$keys[End]"       ]] && bindkey -- "$keys[End]"       end-of-line
-[[ -n "$keys[Insert]"    ]] && bindkey -- "$keys[Insert]"    overwrite-mode
-[[ -n "$keys[Backspace]" ]] && bindkey -- "$keys[Backspace]" backward-delete-char
-[[ -n "$keys[Delete]"    ]] && bindkey -- "$keys[Delete]"    delete-char
-[[ -n "$keys[Left]"      ]] && bindkey -- "$keys[Left]"      backward-char
-[[ -n "$keys[Right]"     ]] && bindkey -- "$keys[Right]"     forward-char
-[[ -n "$keys[Up]"        ]] && bindkey -- "$keys[Up]"        up-line-or-beginning-search
-[[ -n "$keys[Down]"      ]] && bindkey -- "$keys[Down]"      down-line-or-beginning-search
-[[ -n "$keys[ShiftTab]"  ]] && bindkey -- "$keys[ShiftTab]"  reverse-menu-complete
+bindkey -- "$keys[Home]"          beginning-of-line
+bindkey -- "$keys[End]"           end-of-line
+bindkey -- "$keys[Insert]"        overwrite-mode
+bindkey -- "$keys[Backspace]"     backward-delete-char
+bindkey -- "$keys[Delete]"        delete-char
+bindkey -- "$keys[Left]"          backward-char
+bindkey -- "$keys[Right]"         forward-char
+bindkey -- "$keys[Up]"            up-line-or-beginning-search
+bindkey -- "$keys[Down]"          down-line-or-beginning-search
+
+bindkey -- "$keys[ShiftTab]"      reverse-menu-complete
+
+bindkey -- "$keys[CtrlLeft]"      backward-word
+bindkey -- "$keys[CtrlRight]"     forward-word
+bindkey -- "$keys[CtrlDelete]"    kill-word
+bindkey -- "$keys[CtrlBackspace]" backward-kill-word
 
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     function zle-line-init () {
@@ -181,7 +167,6 @@ setopt pushdignoredups     # Do not store duplicates in the stack.
 setopt pushdsilent         # Do not print the directory stack after pushd or popd.
 setopt pushdtohome         # Push to home directory when no argument is given.
 setopt cdablevars          # Change directory to a path stored in a variable.
-setopt autonamedirs        # Auto add variable-stored paths to ~ list.
 setopt multios             # Write to multiple descriptors.
 setopt extendedglob        # Use extended globbing syntax.
 unsetopt CLOBBER           # Do not overwrite existing files with > and >>.

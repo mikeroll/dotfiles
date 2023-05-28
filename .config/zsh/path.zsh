@@ -33,6 +33,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     )
 elif [[ "$(uname -s)" == "Linux" ]]; then
     path=(
+        "$HOME"/.local/share/rtx/shims
         $path
     )
 fi
