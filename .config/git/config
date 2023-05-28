@@ -4,5 +4,8 @@
 [includeIf "gitdir:~/work/"]
 	path = config-work
 
+[include]
+	path = github
+
 [init]
 	defaultBranch = master
