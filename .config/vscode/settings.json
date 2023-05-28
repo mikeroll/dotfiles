@@ -3,6 +3,7 @@
     // UI
     //
     "window.menuBarVisibility": "hidden",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "GitHub Light",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#695d6940",
@@ -25,7 +26,7 @@
         "terminal.ansiCyan": "#d03592",
         "terminal.ansiBrightCyan": "#ea4aaa",
         "terminal.ansiWhite": "#586069",
-        "terminal.ansiBrightWhite": "#f6f8fa",
+        "terminal.ansiBrightWhite": "#f6f8fa"
     },
     "explorer.openEditors.visible": 10,
     "workbench.editor.showTabs": true,
@@ -41,8 +42,10 @@
     "breadcrumbs.enabled": true,
     "window.titleBarStyle": "native",
     "scm.defaultViewMode": "tree",
+    "search.useIgnoreFiles": true,
     "search.useGlobalIgnoreFiles": true,
     "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.untrustedFiles": "open",
     //
     // Terminal
     //
@@ -50,8 +53,9 @@
     "terminal.external.linuxExec": "termite",
     "terminal.explorerKind": "external",
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "Iosevka",
-    "debug.console.fontFamily": "Iosevka",
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.scrollback": 10000,
+    "debug.console.fontFamily": "monospace",
     "debug.console.fontSize": 14,
     //
     // Editor
@@ -59,7 +63,7 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "Iosevka",
+    "editor.fontFamily": "monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
@@ -67,24 +71,21 @@
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderIndentGuides": false,
     "editor.renderWhitespace": "selection",
     "editor.roundedSelection": false,
-    "editor.rulers": [
-        80,
-        120
-    ],
+    "editor.rulers": [80, 120],
     "editor.bracketPairColorization.enabled": false,
     "editor.suggest.preview": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": false,
-    "diffEditor.ignoreTrimWhitespace": false,
     //
     // Git
     //
     "git.autofetch": true,
     "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -103,18 +104,14 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
+    "diffEditor.ignoreTrimWhitespace": false,
     //
     // Python
     //
     "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
+    "python.linting.mypyEnabled": false,
     "python.linting.lintOnSave": true,
-    "python.venvPath": "~/code/.virtualenvs",
     "python.terminal.activateEnvironment": false,
-    "python.sortImports.args": [
-        "--settings-path",
-        "${workspaceFolder}"
-    ],
     //
     // JS
     //
@@ -130,46 +127,61 @@
     // Syntax-specific
     //
     "files.exclude": {
-        // Python
         "**/*.pyc": true,
         "**/__pycache__": true,
         ".idea": true,
         ".mypy_cache": true,
         ".pytest_cache": true,
-        ".tox": true,
+        ".tox": true
     },
     "files.associations": {
-        "*.jenkinsfile": "groovy",
         "Vagrantfile": "ruby",
-        "Pipfile": "toml"
+        "Pipfile": "toml",
+        "*.json5": "jsonc"
     },
     "[haskell]": {
         "editor.fontLigatures": "'HSKL'"
     },
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true,
+        "source.organizeImports": true
         },
         "editor.formatOnPaste": false,
-        "editor.rulers": [
-            88
-        ]
+        "editor.rulers": [88]
     },
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
     "[dockerfile]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     },
     "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": false,
         "editor.formatOnType": false,
-        "editor.codeLens": false
+        "editor.codeLens": true,
+        "editor.codeActionsOnSave": {
+        "source.formatAll.terraform": true
+        }
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+        "source.formatAll.terraform": true
+        }
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "shellcheck.ignorePatterns": {
         "**/*.zsh": true,
         "**/.zsh*": true,
         "**/.zprofile": true,
-        "**/.envrc": true,
+        "**/.envrc": true
     },
     //
     // Project Manager
@@ -178,5 +190,9 @@
         "$home/dotfiles",
         "$home/code",
         "$home/work"
-    ]
+    ],
+
+    // Plugin tweaks
+    "vsicons.dontShowNewVersionMessage": true,
+    "redhat.telemetry.enabled": false,
 }
