@@ -18,11 +18,14 @@ CopyFile /etc/locale.gen
 CopyFile /etc/locale.conf
 CopyFile /etc/vconsole.conf
 
-WriteHostsFile "${HOSTNAME}"
-ConfigureMakepkg
+# makepkg
+sed -i "/MAKEFLAGS=/c\MAKEFLAGS=\"-j$(nproc)\"" "$(GetPackageOriginalFile pacman /etc/makepkg.conf)"
 
 CreateLink /etc/localtime /usr/share/zoneinfo/"${TIMEZONE}"
 CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
 CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+
+CreateLink /etc/systemd/system/dbus-org.freedesktop.resolve1.service /usr/lib/systemd/system/systemd-resolved.service
+CreateLink /etc/systemd/system/sysinit.target.wants/systemd-resolved.service /usr/lib/systemd/system/systemd-resolved.service
 
 CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
